@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-container": "#eeeeee",
+              "on-background": "#1a1c1c",
+              "inverse-primary": "#c6c6c6",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e2e2e2",
+              "primary": "#000000",
+              "tertiary-container": "#747474",
+              "on-primary": "#e2e2e2",
+              "on-primary-fixed": "#ffffff",
+              "secondary-fixed-dim": "#acabaa",
+              "tertiary-fixed-dim": "#464747",
+              "on-secondary-container": "#1b1c1c",
+              "on-error-container": "#410002",
+              "inverse-surface": "#2f3131",
+              "surface-tint": "#5e5e5e",
+              "secondary": "#5f5e5e",
+              "on-tertiary-fixed-variant": "#e3e2e2",
+              "tertiary-fixed": "#5e5e5e",
+              "outline-variant": "#c6c6c6",
+              "outline": "#777777",
+              "surface-dim": "#dadada",
+              "surface-container-low": "#f3f3f3",
+              "on-surface-variant": "#474747",
+              "on-tertiary-container": "#ffffff",
+              "surface-container-high": "#e8e8e8",
+              "primary-fixed-dim": "#474747",
+              "on-tertiary-fixed": "#ffffff",
+              "tertiary": "#3b3b3c",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "background": "#f9f9f9",
+              "secondary-fixed": "#c8c6c6",
+              "on-tertiary": "#e3e2e2",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "primary-fixed": "#5e5e5e",
+              "on-primary-container": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-surface": "#1a1c1c",
+              "surface-bright": "#f9f9f9",
+              "secondary-container": "#d6d4d3",
+              "primary-container": "#3b3b3b",
+              "surface": "#f9f9f9",
+              "surface-container-highest": "#e2e2e2",
+              "inverse-on-surface": "#f1f1f1"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-zinc-950 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Professional headshot of a creative director in black and white with soft lighting and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW3TVdyaTvN22BsQ37YJDOV19WnT-WM1fkkBdcF3igx8GsDAfMvb1EfZM_sHPFkegVms3_yw6DPqBHnUeqd6aA9y41j9oX5awEqWSMe2LwvvYxc1HY2_qp1lscXDsZ0nsD7EVfFSE4OHw2xOLtOyDO2bZWbnIlbzaisZhYovDxA2glt9vIXQincQg6NAJOF4CLHKgmJ9bTVSjjIMaInV1usRe7EmnDqO2GSoPeTgufiBeADanLRRLV5anjQ6Cwho6uQknuASU4mC4"/>
+</div>
+<span class="text-lg font-semibold tracking-tighter text-zinc-900 dark:text-zinc-50">Zethub CRM</span>
+</div>
+<button class="material-symbols-outlined text-zinc-900 dark:text-zinc-50 active:opacity-70 transition-opacity">notifications</button>
+</header>
+<main class="pt-24 px-6 max-w-md mx-auto">
+<!-- Milestone Header -->
+<section class="mb-10">
+<span class="text-[10px] font-semibold uppercase tracking-widest text-secondary mb-2 block">Project Phase 02</span>
+<h1 class="text-4xl font-semibold tracking-tight text-primary leading-tight">Milestone Approval</h1>
+<p class="text-on-surface-variant mt-4 text-sm leading-relaxed">Review the final assets for the Brand Identity phase. Please ensure all deliverables align with the initial creative brief before approving.</p>
+</section>
+<!-- Status Card (Glassmorphism/Asymmetric) -->
+<div class="relative mb-12">
+<div class="absolute -top-4 -right-2 bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter z-10">Pending</div>
+<div class="bg-surface-container-lowest border border-white/20 backdrop-blur-xl p-6 rounded-xl shadow-sm">
+<div class="flex justify-between items-end">
+<div>
+<div class="text-[10px] font-semibold uppercase tracking-widest text-outline mb-1">Due Date</div>
+<div class="text-xl font-medium">Oct 24, 2023</div>
+</div>
+<div class="text-right">
+<div class="text-[10px] font-semibold uppercase tracking-widest text-outline mb-1">Value</div>
+<div class="text-xl font-medium tracking-tight">$4,250.00</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Deliverables List -->
+<section class="space-y-4">
+<h2 class="text-sm font-semibold uppercase tracking-widest text-secondary mb-4">Deliverables</h2>
+<!-- Deliverable Item 1 -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-lg group active:bg-surface-container-high transition-colors">
+<div class="w-12 h-12 rounded bg-surface-container-lowest flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary">web_asset</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-medium text-primary">Homepage Prototype</p>
+<p class="text-xs text-on-surface-variant">Figma Interactive Link</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary">arrow_forward_ios</span>
+</div>
+<!-- Deliverable Item 2 -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-lg group active:bg-surface-container-high transition-colors">
+<div class="w-12 h-12 rounded bg-surface-container-lowest flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary">palette</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-medium text-primary">Style Guide</p>
+<p class="text-xs text-on-surface-variant">PDF • 4.2 MB</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary">arrow_forward_ios</span>
+</div>
+<!-- Deliverable Item 3 -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-lg group active:bg-surface-container-high transition-colors">
+<div class="w-12 h-12 rounded bg-surface-container-lowest flex items-center justify-center mr-4">
+<span class="material-symbols-outlined text-primary">collections</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-medium text-primary">Asset Library</p>
+<p class="text-xs text-on-surface-variant">ZIP • 128 MB</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary">arrow_forward_ios</span>
+</div>
+</section>
+<!-- Project Notes (Asymmetric layout element) -->
+<section class="mt-12 bg-surface-container-highest/30 p-6 rounded-xl border-l-2 border-primary">
+<h3 class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Designer Note</h3>
+<p class="text-xs text-on-surface-variant italic leading-relaxed">"The Homepage Prototype includes the new dark mode toggle interaction as discussed in Tuesday's sync. Please pay close attention to the micro-interactions in the hero section."</p>
+</section>
+</main>
+<!-- Bottom Action Bar (Fixed) -->
+<div class="fixed bottom-20 left-0 w-full bg-white/80 backdrop-blur-xl px-6 py-6 flex flex-col gap-3 z-40">
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-semibold text-sm active:scale-[0.98] transition-transform">
+            Approve Milestone
+        </button>
+<button class="w-full border border-outline-variant text-primary py-4 rounded-lg font-semibold text-sm active:bg-surface-container-low transition-colors">
+            Request Changes
+        </button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full border-t border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl flex justify-around items-center h-20 pb-4 px-2 w-full z-50">
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</div>
+<!-- Active Tab: Projects -->
+<div class="flex flex-col items-center justify-center text-zinc-900 dark:text-zinc-50 scale-105 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Projects</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Payments</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zethub CRM - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#c6c6c6",
+                        "surface-dim": "#dadada",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9f9",
+                        "outline-variant": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "primary-fixed-dim": "#474747",
+                        "secondary-container": "#d6d4d3",
+                        "outline": "#777777",
+                        "on-tertiary-fixed-variant": "#e3e2e2",
+                        "secondary-fixed-dim": "#acabaa",
+                        "on-primary": "#e2e2e2",
+                        "on-primary-container": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#1b1c1c",
+                        "on-error-container": "#410002",
+                        "background": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "tertiary": "#3b3b3c",
+                        "on-tertiary-fixed": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-fixed-dim": "#464747",
+                        "primary-container": "#3b3b3b",
+                        "on-surface-variant": "#474747",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "tertiary-container": "#747474",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-variant": "#e2e2e2",
+                        "secondary": "#5f5e5e",
+                        "primary-fixed": "#5e5e5e",
+                        "inverse-surface": "#2f3131",
+                        "surface-container": "#eeeeee",
+                        "primary": "#000000",
+                        "surface-tint": "#5e5e5e",
+                        "tertiary-fixed": "#5e5e5e",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#ffffff",
+                        "secondary-fixed": "#c8c6c6",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary": "#e3e2e2",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-primary-fixed": "#ffffff"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-surface-container-highest">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 flex flex-col p-4 z-50">
+<div class="mb-8 px-2 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-lg" data-icon="dashboard">dashboard</span>
+</div>
+<div>
+<h1 class="text-xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">Zethub</h1>
+<p class="text-[10px] text-neutral-500 uppercase tracking-widest font-bold">CRM Team Panel</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Active State: Dashboard -->
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-900 dark:text-neutral-50 font-semibold bg-neutral-200 dark:bg-neutral-800 rounded-lg transition-opacity active:opacity-80" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] font-medium text-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="folder_open">folder_open</span>
+<span class="font-['Inter'] font-medium text-sm">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="event_available">event_available</span>
+<span class="font-['Inter'] font-medium text-sm">Milestones</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="description">description</span>
+<span class="font-['Inter'] font-medium text-sm">Submissions</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-neutral-200 pt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+<span class="font-['Inter'] font-medium text-sm">Settings</span>
+</a>
+<div class="mt-4 flex items-center gap-3 px-3 py-2">
+<img alt="User Profile" class="w-8 h-8 rounded-full bg-surface-container-high" data-alt="professional corporate headshot of a team lead with neutral background and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCXEiHcY9uKpz12piwxslVYMELAo-1mWMTL-eFCIPnG3cYlB-1-MvPKAzMXgcVBFqviTNK7lozNYyEDTpxPQPnOqISLe4SYnMrjyXT0QZlAo2MXv2E_qQeqwWBWiSkzQyjhfWcC20Byyy7UW8Jfi9bNqFcXQE-BWPLH_y8S8KIgr72Z67g2WZ6LByZgKWqYHKO2wTQKN2UhkS3nONl_KrOyZFEIGwgj5l9DL-PbhKXsc-_gsyrcumfVp_VEks-WSsfbAOKG7v_u_A"/>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-on-surface">Alex Rivera</span>
+<span class="text-[10px] text-on-surface-variant">Team Lead</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Viewport -->
+<main class="pl-64 min-h-screen bg-surface">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 left-64 h-16 z-40 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-xl border-b border-neutral-100 dark:border-neutral-800 flex justify-between items-center px-8">
+<div class="flex items-center flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-lg text-sm focus:ring-1 focus:ring-primary/20 placeholder:text-outline-variant" placeholder="Search tasks or files..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-on-surface-variant hover:text-on-surface transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-px bg-surface-container-high"></div>
+<button class="flex items-center gap-2 group">
+<span class="text-xs font-medium text-on-surface-variant group-hover:text-on-surface">ENG</span>
+<span class="material-symbols-outlined text-sm text-outline" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</header>
+<!-- Page Content -->
+<div class="pt-24 pb-12 px-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Left Column: Primary Dashboard -->
+<div class="flex-1 space-y-8">
+<!-- KPI Row (Asymmetric Bento) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between h-48 group">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-1">Active Projects</p>
+<h2 class="text-4xl font-semibold text-primary">24</h2>
+</div>
+<span class="material-symbols-outlined text-surface-container-highest text-4xl" data-icon="layers">layers</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] px-2 py-0.5 bg-primary text-on-primary rounded-full">↑ 12%</span>
+<span class="text-xs text-on-surface-variant">vs last month</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between h-48">
+<div>
+<p class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-1">Pending Review</p>
+<h2 class="text-4xl font-semibold text-primary">08</h2>
+</div>
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-low" data-alt="avatar of a young professional with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5E-1urqyYgae94103_0L201NuZw_nou7rXBWei8-v6_PbOKjJCeUtSK_51wJFeIM9SSGrQhqaEoI_cbZRrXVrnxLFjihSH-KcKKM4GcaGNmMFY73vnyO2U_9vhr8iSCx70EnwmkGpgr2uWxaZLgy0R22eWtOV8JSfVBV_CB0XUwF28MY_1P5_zS5ofIOum6LWCdgO6PKYwaYomnzKZeJg0F9MWkC8Wiq_TxE1B2DBPrUMOgUa83lLakL-DwFMEPEfEe15e0fHZfY"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-container-low" data-alt="avatar of a smiling creative director" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxElpaAPdVgmJxI7ZMeF6ifZIiGVXLJ8mvsxeqln7TABmN-2ahqHu8duZFdBQ3B5mT8zWrnxziFpemMb5AsSj8aKpUM0u2KtvLA-3-NWcxJP6RmihE5arZuvn8QbVTWAsACF583d5NLcI3tec_7iSY4rAFhJbhmtyP6VjXzL23PnMlFZ0VDdN64sK-HYlWS8WWgpjI0L0l0AM4ghosUgA3XPucgzpDe6GhUD7Mkwme58oN9-N8sQNgKwRAJadgpLLp6aKajpr0X-8"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-surface-container-low flex items-center justify-center text-[10px] font-bold">+3</div>
+</div>
+</div>
+</div>
+<!-- Tasks List Area -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-medium text-primary">Current Sprint Tasks</h3>
+<button class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">
+                                View Archive <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- Task Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between group hover:bg-white transition-all">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-on-surface">Analyze Q3 Performance Metrics</h4>
+<p class="text-xs text-on-surface-variant mt-1">Project: Enterprise Growth</p>
+</div>
+</div>
+<div class="flex items-center gap-12">
+<div class="text-right">
+<p class="text-[10px] font-semibold uppercase tracking-tighter text-on-surface-variant">Deadline</p>
+<p class="text-xs font-medium text-error">Oct 24, 2023</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-xs font-medium">In Progress</span>
+</div>
+<button class="p-2 text-outline-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Task Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between group hover:bg-white transition-all">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="design_services">design_services</span>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-on-surface">Update Brand Identity Guidelines</h4>
+<p class="text-xs text-on-surface-variant mt-1">Project: Core Visuals</p>
+</div>
+</div>
+<div class="flex items-center gap-12">
+<div class="text-right">
+<p class="text-[10px] font-semibold uppercase tracking-tighter text-on-surface-variant">Deadline</p>
+<p class="text-xs font-medium">Oct 28, 2023</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="text-xs font-medium text-on-surface-variant">Todo</span>
+</div>
+<button class="p-2 text-outline-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Task Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between group hover:bg-white transition-all opacity-60">
+<div class="flex items-center gap-6">
+<div class="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center text-outline">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<h4 class="text-sm font-semibold text-on-surface line-through">Finalize Vendor Agreements</h4>
+<p class="text-xs text-on-surface-variant mt-1">Project: Logistics Hub</p>
+</div>
+</div>
+<div class="flex items-center gap-12">
+<div class="text-right">
+<p class="text-[10px] font-semibold uppercase tracking-tighter text-on-surface-variant">Deadline</p>
+<p class="text-xs font-medium">Completed</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+<span class="text-xs font-medium">Done</span>
+</div>
+<button class="p-2 text-outline-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Recent Activity & Sidebar Stats -->
+<div class="w-full lg:w-80 space-y-8">
+<!-- Progress Card -->
+<div class="bg-primary p-8 rounded-xl text-on-primary">
+<p class="text-[10px] font-semibold uppercase tracking-widest opacity-60 mb-6">Team Capacity</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<h4 class="text-3xl font-semibold">84%</h4>
+<span class="text-xs opacity-80">Weekly Load</span>
+</div>
+<div class="w-full h-1 bg-on-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-on-primary w-[84%]"></div>
+</div>
+</div>
+<button class="mt-8 w-full py-3 bg-on-primary text-primary font-semibold text-xs rounded-lg active:scale-95 transition-all">
+                            Manage Resources
+                        </button>
+</div>
+<!-- Activity Feed -->
+<section class="space-y-6">
+<h3 class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant">Recent Activity</h3>
+<div class="space-y-8 border-l border-surface-container-high ml-2 pl-6">
+<!-- Feed Item -->
+<div class="relative">
+<div class="absolute -left-[31px] top-0 w-2 h-2 rounded-full bg-primary ring-4 ring-surface"></div>
+<p class="text-xs font-semibold text-on-surface">Sarah K. moved "Sprint Planning" to Review</p>
+<p class="text-[10px] text-outline mt-1">24 minutes ago</p>
+</div>
+<!-- Feed Item -->
+<div class="relative">
+<div class="absolute -left-[31px] top-0 w-2 h-2 rounded-full bg-outline-variant ring-4 ring-surface"></div>
+<p class="text-xs font-semibold text-on-surface">New document uploaded by James</p>
+<p class="text-[10px] text-outline mt-1">2 hours ago</p>
+<div class="mt-3 p-3 bg-surface-container-low rounded flex items-center gap-3">
+<span class="material-symbols-outlined text-sm" data-icon="article">article</span>
+<span class="text-[10px] font-medium truncate">Annual_Report_Final.pdf</span>
+</div>
+</div>
+<!-- Feed Item -->
+<div class="relative">
+<div class="absolute -left-[31px] top-0 w-2 h-2 rounded-full bg-outline-variant ring-4 ring-surface"></div>
+<p class="text-xs font-semibold text-on-surface">Milestone "Alpha Launch" reached</p>
+<p class="text-[10px] text-outline mt-1">Yesterday</p>
+</div>
+</div>
+</section>
+<!-- Mini Map or Location context -->
+<section class="space-y-4">
+<h3 class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant">Main Office</h3>
+<div class="rounded-xl overflow-hidden h-32 grayscale contrast-125 brightness-90">
+<img class="w-full h-full object-cover" data-alt="minimalist architectural map of downtown san francisco showing clean street grids and park areas" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATeSzFKh-a5avlsP7DSWeDf2fkTcQA7cBUewi6uz8CKj8ILCxBxeaW_wTQVBxTP_0rTRfvq0mScVjJL5BrU2MH5SCB-OpiHrSXohfkK7nd-yWjS16DmAO7JKjN5O4XcBObb3O4m7SkAJ0ss06AuxelpxoQdVEf6ipNg2jslNvV7_f1GYX6lrxyfYBNSAqjym97u_NP_lEqWCKSbdZtLrG5EVLFqPKJH1IqlkeDs2-GfBM06D1y675aD06ErY5gJz1J5-_ixuv9H14"/>
+</div>
+<p class="text-[10px] text-on-surface-variant font-medium">Headquarters • 12:45 PM PDT</p>
+</section>
+</div>
+</div>
+</div>
+<!-- Secondary Navigation/Floating Action -->
+<div class="fixed bottom-8 right-8 flex gap-4">
+<button class="bg-surface-container-lowest p-4 rounded-full shadow-2xl shadow-primary/5 flex items-center justify-center text-primary hover:scale-105 transition-transform active:scale-95 border border-surface-container-low">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</main>
+</body></html>

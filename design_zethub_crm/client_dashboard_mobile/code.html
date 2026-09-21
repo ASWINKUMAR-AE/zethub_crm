@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zethub CRM - Dashboard Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-container": "#eeeeee",
+              "on-background": "#1a1c1c",
+              "inverse-primary": "#c6c6c6",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e2e2e2",
+              "primary": "#000000",
+              "tertiary-container": "#747474",
+              "on-primary": "#e2e2e2",
+              "on-primary-fixed": "#ffffff",
+              "secondary-fixed-dim": "#acabaa",
+              "tertiary-fixed-dim": "#464747",
+              "on-secondary-container": "#1b1c1c",
+              "on-error-container": "#410002",
+              "inverse-surface": "#2f3131",
+              "surface-tint": "#5e5e5e",
+              "secondary": "#5f5e5e",
+              "on-tertiary-fixed-variant": "#e3e2e2",
+              "tertiary-fixed": "#5e5e5e",
+              "outline-variant": "#c6c6c6",
+              "outline": "#777777",
+              "surface-dim": "#dadada",
+              "surface-container-low": "#f3f3f3",
+              "on-surface-variant": "#474747",
+              "on-tertiary-container": "#ffffff",
+              "surface-container-high": "#e8e8e8",
+              "primary-fixed-dim": "#474747",
+              "on-tertiary-fixed": "#ffffff",
+              "tertiary": "#3b3b3c",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "background": "#f9f9f9",
+              "secondary-fixed": "#c8c6c6",
+              "on-tertiary": "#e3e2e2",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "primary-fixed": "#5e5e5e",
+              "on-primary-container": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-surface": "#1a1c1c",
+              "surface-bright": "#f9f9f9",
+              "secondary-container": "#d6d4d3",
+              "primary-container": "#3b3b3b",
+              "surface": "#f9f9f9",
+              "surface-container-highest": "#e2e2e2",
+              "inverse-on-surface": "#f1f1f1"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-zinc-950 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<img alt="User profile photo" class="w-8 h-8 rounded-full bg-surface-container-high" data-alt="Close-up professional portrait of a business person in minimalist monochromatic attire against a soft grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1mpGS3UEhY2Nprv6NjTnhrC36G-5CR-zOqCn7aIk6mGdY4I96nSMmZbHE6gdTbQCyearw19vRdjCivt1VoxmeSMlemOk64EwTH1RRDbCmevQT0uIzrLfSK7sOI3JfrAHTyNKtWvuzu5wXKItOLq35RS3DsokRdoZxQuyMRX0BCMojoVBYfD4raevQ7w-iXtkMr3plceArT4Y_NfgJJ5HkgUgWE866z2sVgiKTmYGdjonTbst1Pb9Nwz9Ap82ZWjOj-lmVsa0Br1I"/>
+<span class="text-lg font-semibold tracking-tighter text-zinc-900 dark:text-zinc-50 font-sans font-medium tracking-tight">Zethub CRM</span>
+</div>
+<div class="hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors p-2 rounded-full active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-zinc-900 dark:text-zinc-50">notifications</span>
+</div>
+</header>
+<main class="pt-20 pb-28 px-6 space-y-8">
+<!-- Dashboard Header -->
+<section>
+<h1 class="text-3xl font-semibold text-primary tracking-tight">Dashboard Overview</h1>
+<p class="text-on-surface-variant text-sm mt-1">Welcome back, here is your project status.</p>
+</section>
+<!-- Project Progress Bento -->
+<section class="grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.04)]">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant">Active Project</span>
+<h2 class="text-xl font-medium text-primary">Neo-Industrial Identity</h2>
+</div>
+<span class="text-xs font-semibold bg-surface-container-high px-2 py-1 rounded">85% Complete</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+<div class="mt-6 grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<span class="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant">Next Milestone</span>
+<p class="text-sm font-medium">Final Brand Audit</p>
+</div>
+<div class="space-y-1 text-right">
+<span class="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant">Due Date</span>
+<p class="text-sm font-medium">Oct 24</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl space-y-3">
+<span class="material-symbols-outlined text-primary">payments</span>
+<div>
+<span class="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant">Pending</span>
+<p class="text-lg font-semibold">$2,400.00</p>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-5 rounded-xl space-y-3">
+<span class="material-symbols-outlined text-on-primary">account_tree</span>
+<div>
+<span class="text-[10px] font-semibold uppercase tracking-widest opacity-70">Milestones</span>
+<p class="text-lg font-semibold">12 / 14</p>
+</div>
+</div>
+</section>
+<!-- Quick Links / Active Milestones -->
+<section class="space-y-4">
+<div class="flex justify-between items-end px-1">
+<h3 class="text-sm font-semibold uppercase tracking-widest text-on-surface">Active Milestones</h3>
+<span class="text-xs font-medium text-on-surface-variant">View All</span>
+</div>
+<div class="space-y-2">
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between transition-colors hover:bg-surface-container-low active:scale-[0.98] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">description</span>
+</div>
+<div>
+<p class="text-sm font-medium text-primary">Content Strategy Draft</p>
+<p class="text-xs text-on-surface-variant">Awaiting client approval</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between transition-colors hover:bg-surface-container-low active:scale-[0.98] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">palette</span>
+</div>
+<div>
+<p class="text-sm font-medium text-primary">Color Palette Refresh</p>
+<p class="text-xs text-on-surface-variant">In Review</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between transition-colors hover:bg-surface-container-low active:scale-[0.98] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">cloud_upload</span>
+</div>
+<div>
+<p class="text-sm font-medium text-primary">Asset Handoff</p>
+<p class="text-xs text-on-surface-variant">Scheduled for Oct 28</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Payment Overview Card -->
+<section class="bg-surface-container-high/50 p-6 rounded-xl border border-outline-variant/20">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<h3 class="text-sm font-semibold uppercase tracking-widest text-primary">Payment Status</h3>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-2xl font-bold text-primary tracking-tight">$14,200.00</p>
+<p class="text-xs text-on-surface-variant">Total project value</p>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg text-xs font-semibold active:opacity-80 transition-opacity">
+                    Pay Invoice
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border-t border-zinc-200 dark:border-zinc-800 flex justify-around items-center h-20 pb-4 px-2 w-full z-50">
+<a class="flex flex-col items-center justify-center text-zinc-900 dark:text-zinc-50 scale-105 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Payments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-50 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

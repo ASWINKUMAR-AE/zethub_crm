@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zethub - My Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#c6c6c6",
+              "surface-dim": "#dadada",
+              "error": "#ba1a1a",
+              "surface": "#f9f9f9",
+              "outline-variant": "#c6c6c6",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "primary-fixed-dim": "#474747",
+              "secondary-container": "#d6d4d3",
+              "outline": "#777777",
+              "on-tertiary-fixed-variant": "#e3e2e2",
+              "secondary-fixed-dim": "#acabaa",
+              "on-primary": "#e2e2e2",
+              "on-primary-container": "#ffffff",
+              "on-secondary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-secondary-container": "#1b1c1c",
+              "on-error-container": "#410002",
+              "background": "#f9f9f9",
+              "on-surface": "#1a1c1c",
+              "tertiary": "#3b3b3c",
+              "on-tertiary-fixed": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f3f3f3",
+              "surface-container-high": "#e8e8e8",
+              "tertiary-fixed-dim": "#464747",
+              "primary-container": "#3b3b3b",
+              "on-surface-variant": "#474747",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "tertiary-container": "#747474",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-variant": "#e2e2e2",
+              "secondary": "#5f5e5e",
+              "primary-fixed": "#5e5e5e",
+              "inverse-surface": "#2f3131",
+              "surface-container": "#eeeeee",
+              "primary": "#000000",
+              "surface-tint": "#5e5e5e",
+              "tertiary-fixed": "#5e5e5e",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#ffffff",
+              "secondary-fixed": "#c8c6c6",
+              "surface-container-highest": "#e2e2e2",
+              "surface-bright": "#f9f9f9",
+              "on-background": "#1a1c1c",
+              "on-tertiary": "#e3e2e2",
+              "on-secondary-fixed": "#1b1c1c",
+              "on-primary-fixed": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 22px;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased flex justify-center items-center min-h-screen">
+<!-- Mobile Frame (iPhone 14 style simulated) -->
+<div class="relative w-[393px] h-[852px] bg-white rounded-[55px] shadow-2xl overflow-hidden border-[8px] border-zinc-900 flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-[377px] z-50 bg-slate-50 dark:bg-zinc-950 flex justify-between items-center px-6 h-16 transition-opacity">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a professional woman with a clean minimal aesthetic in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbMcrs3No-qGmySrLIoTVFvVwUVyKJdBew0JPJ6_Xe501UjhO5-nMARjZdvev9t-W17ikeU_6VfBeObiko3UcRpJdybhMDAoOVvq_lofka-MYg5Cru_rhskPEX8MHDsl0G-mD_7QraxXD9G2MJUxMApSvVBoN3F9rm1oUz7wXnQ6_QVRNELI7Wq0orSpFkZQfi7s8LlfxFlTjWXCpEmGLCSELP4uiyrIblPR00J5zPnk6aWvi8UMk5HADFjMSs7XvRLheMwji22H8"/>
+</div>
+<h1 class="text-xl font-semibold text-zinc-900 dark:text-zinc-50 tracking-tighter font-['Inter']">Zethub</h1>
+</div>
+<button class="text-zinc-900 dark:text-zinc-50 hover:opacity-70 transition-opacity active:scale-95 duration-100">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<!-- style_separation_logic -->
+<div class="absolute bottom-0 left-0 bg-zinc-100 dark:bg-zinc-900 h-[1px] w-full"></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto pt-20 pb-24 px-5 hide-scrollbar bg-surface">
+<!-- Section Header -->
+<div class="mb-8 mt-2">
+<h2 class="text-3xl font-bold tracking-tight text-primary">My Projects</h2>
+<p class="text-on-surface-variant text-sm mt-1">Active assignments for Q3 cycle</p>
+</div>
+<!-- Bento Layout for Projects -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Project Card 1: Elevated Focus -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant px-2 py-1 bg-surface-container-high rounded-full">In Progress</span>
+<span class="material-symbols-outlined text-zinc-400" data-icon="more_horiz">more_horiz</span>
+</div>
+<h3 class="text-xl font-semibold text-primary mb-2">Alpha CRM Redesign</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Redefining the customer journey maps for the enterprise tier users.</p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="minimalist portrait of a creative professional man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaJOh3ZLU7OioMUpjSIrpJbaiSPdy2jnVO77-nd8KdiS0C2XbRw1ww5u_7tTtca9isaqgB0bvfzLDMLFNc8GjYj461iSKZfIX77AhWuK26jQA-rptBZwYwo7FL7GrBadgEigfUflZXVa67LBHnhNk-LvM4BH2lPKiSpdqppB2yIi5W6tVDK4r9SxH3oZ-EatBwXGlJnd7JIWKVZo4BLQBQdT9Q5WVFgkhkDPS960dAMyoTuhnlT_1QBICaR0RTXerIV3zDi6trjDY"/>
+</div>
+<div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="minimalist portrait of a professional woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClL8TgEwBIV8mcd96XuAR17QaASTtD44g4ZAARjYkSSRKrqjnicsb6SQvLH_r4_xyiGxISxsj0puGWkkC_GGxBpft-LtyHRtpt1L8oADc3EoJqtGb5fE_Bohv7GvdhawCScG4DrR0wl9qbXjrEdNVAEHMdGoO7TZRHN_74O1lyRK4hqR0zvDUIHjsfqEqr8dRb_2E2Pyz64j_Ag1S4l8vvRinltqGwK85nPeKvB9Zg4dQ36mTDC3R4BtlGkVZWcfyUB3IdeQIpeg0"/>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-zinc-500">
+<span class="material-symbols-outlined text-sm" data-icon="event">event</span>
+<span class="text-xs font-medium">Oct 12</span>
+</div>
+</div>
+</div>
+<!-- Project Card 2: Minimal Tonal -->
+<div class="bg-surface-container-low rounded-xl p-5">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant px-2 py-1 bg-surface-container-highest rounded-full">Review</span>
+<span class="material-symbols-outlined text-zinc-400" data-icon="verified">verified</span>
+</div>
+<h3 class="text-xl font-semibold text-primary mb-2">Neural Link API</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Documentation and endpoint stress testing for v2 release.</p>
+<div class="flex items-center justify-between">
+<div class="h-1.5 flex-1 bg-surface-container-high rounded-full mr-8">
+<div class="h-full bg-primary w-[85%] rounded-full"></div>
+</div>
+<div class="flex items-center gap-1.5 text-zinc-500">
+<span class="material-symbols-outlined text-sm" data-icon="event">event</span>
+<span class="text-xs font-medium">Sep 28</span>
+</div>
+</div>
+</div>
+<!-- Project Card 3: Editorial Style -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant px-2 py-1 bg-surface-container-high rounded-full">Pending</span>
+<span class="material-symbols-outlined text-zinc-300" data-icon="schedule">schedule</span>
+</div>
+<h3 class="text-xl font-semibold text-primary mb-2">ZetPay Integration</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Connecting legacy payment gateways to the new Zethub core.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-zinc-300"></div>
+<span class="text-xs text-on-surface-variant font-medium">Waiting for assets</span>
+</div>
+<div class="flex items-center gap-1.5 text-zinc-500">
+<span class="material-symbols-outlined text-sm" data-icon="event">event</span>
+<span class="text-xs font-medium">Nov 04</span>
+</div>
+</div>
+</div>
+<!-- Project Card 4: Asymmetric Grid Element -->
+<div class="bg-primary text-on-primary rounded-xl p-5 flex flex-col justify-between aspect-square max-w-[180px]">
+<div>
+<span class="material-symbols-outlined mb-4" data-icon="add_circle">add_circle</span>
+<h3 class="text-lg font-bold leading-tight">Start New Project</h3>
+</div>
+<p class="text-[10px] uppercase tracking-widest opacity-60">Initiate Cycle</p>
+</div>
+</div>
+<!-- Stats Ticker -->
+<div class="mt-10 py-6 px-4 bg-surface-container-low rounded-2xl flex justify-between items-center">
+<div class="text-center px-4">
+<p class="text-2xl font-bold text-primary">12</p>
+<p class="text-[9px] uppercase tracking-tighter text-on-surface-variant">Active</p>
+</div>
+<div class="w-[1px] h-8 bg-outline-variant/30"></div>
+<div class="text-center px-4">
+<p class="text-2xl font-bold text-primary">04</p>
+<p class="text-[9px] uppercase tracking-tighter text-on-surface-variant">Review</p>
+</div>
+<div class="w-[1px] h-8 bg-outline-variant/30"></div>
+<div class="text-center px-4">
+<p class="text-2xl font-bold text-primary">28</p>
+<p class="text-[9px] uppercase tracking-tighter text-on-surface-variant">Done</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-[377px] z-50 flex justify-around items-center pt-3 pb-8 px-4 bg-slate-50/80 dark:bg-zinc-950/80 backdrop-blur-xl border-t border-zinc-200/50 dark:border-zinc-800/50">
+<!-- Home -->
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-zinc-600 dark:hover:text-zinc-300 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-['Inter'] mt-1">Home</span>
+</button>
+<!-- Projects (ACTIVE) -->
+<button class="flex flex-col items-center justify-center text-zinc-900 dark:text-zinc-50 font-bold active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="folder_open" style="font-variation-settings: 'FILL' 1;">folder_open</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-['Inter'] mt-1">Projects</span>
+</button>
+<!-- Tasks -->
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-zinc-600 dark:hover:text-zinc-300 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="assignment_turned_in">assignment_turned_in</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-['Inter'] mt-1">Tasks</span>
+</button>
+<!-- Profile -->
+<button class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 hover:text-zinc-600 dark:hover:text-zinc-300 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-['Inter'] mt-1">Profile</span>
+</button>
+</nav>
+<!-- Dynamic Island Overlay -->
+<div class="absolute top-2 left-1/2 -translate-x-1/2 w-28 h-7 bg-zinc-900 rounded-full z-[100]"></div>
+<!-- Home Indicator -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-zinc-300 dark:bg-zinc-700 rounded-full z-[100]"></div>
+</div>
+</body></html>

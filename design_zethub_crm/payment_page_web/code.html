@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Financial Overview - Zethub CRM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-container": "#eeeeee",
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#c6c6c6",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#000000",
+                        "tertiary-container": "#747474",
+                        "on-primary": "#e2e2e2",
+                        "on-primary-fixed": "#ffffff",
+                        "secondary-fixed-dim": "#acabaa",
+                        "tertiary-fixed-dim": "#464747",
+                        "on-secondary-container": "#1b1c1c",
+                        "on-error-container": "#410002",
+                        "inverse-surface": "#2f3131",
+                        "surface-tint": "#5e5e5e",
+                        "secondary": "#5f5e5e",
+                        "on-tertiary-fixed-variant": "#e3e2e2",
+                        "tertiary-fixed": "#5e5e5e",
+                        "outline-variant": "#c6c6c6",
+                        "outline": "#777777",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f3",
+                        "on-surface-variant": "#474747",
+                        "on-tertiary-container": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#474747",
+                        "on-tertiary-fixed": "#ffffff",
+                        "tertiary": "#3b3b3c",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "background": "#f9f9f9",
+                        "secondary-fixed": "#c8c6c6",
+                        "on-tertiary": "#e3e2e2",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "primary-fixed": "#5e5e5e",
+                        "on-primary-container": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "secondary-container": "#d6d4d3",
+                        "primary-container": "#3b3b3b",
+                        "surface": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "inverse-on-surface": "#f1f1f1"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased flex">
+<!-- SideNavBar Component -->
+<aside class="h-screen w-64 border-r border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 flex flex-col py-8 px-4 space-y-2 sticky top-0 hidden md:flex">
+<div class="mb-8 px-2">
+<h1 class="text-lg font-semibold tracking-tighter text-neutral-950 dark:text-white">Zethub</h1>
+<p class="text-xs text-neutral-500 font-medium">CRM Architecture</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center space-x-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200 rounded-lg text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200 rounded-lg text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span>Projects</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200 rounded-lg text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="event_upcoming">event_upcoming</span>
+<span>Milestones</span>
+</a>
+<!-- Active State: Payments -->
+<a class="flex items-center space-x-3 px-3 py-2 text-neutral-900 dark:text-white font-semibold bg-neutral-200/50 dark:bg-neutral-800/50 rounded-lg text-sm tracking-tight opacity-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>Payments</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200 rounded-lg text-sm font-medium tracking-tight" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-2">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional portrait of a confident man in business casual attire with a soft blurred office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcPY170niZrjaSgz3nxIsDnrcJMS-JWnIzdijrPh8qt5vcncUyGIXwmp06_k3I3ss0HKh_JB4OYTPR7hyIwatJNEiXzT6Tfv27-eYZksPwhqb7PpgJL7GBLT_IyCW0dyjRcxRzpOXn1Icx6nvx-FGFqtUEbQxbMUgr1gylXyPPJSmNaTPNhXyHn2I3yQXhQ8m9sJGH0QPEWxtaNdsZSiTvzHMloBnvVd3dpf7nxDUzi_-uyS0SjQbSy-Ypta5HkcWzi7aZK17ZUlM"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-neutral-900 dark:text-white">Alex Rivera</span>
+<span class="text-[10px] text-neutral-500">Premium Account</span>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col min-h-screen">
+<!-- TopNavBar Component -->
+<header class="sticky top-0 z-40 flex items-center justify-between px-8 w-full w-full h-16 border-b border-neutral-100 dark:border-neutral-800 bg-white/80 dark:bg-black/80 backdrop-blur-xl">
+<div class="flex items-center flex-1">
+<div class="max-w-md w-full relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-sm" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-1 ring-neutral-200 dark:ring-neutral-700 transition-all placeholder:text-neutral-400" placeholder="Search invoices..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-6 ml-4">
+<div class="flex items-center space-x-4">
+<button class="text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-neutral-100 dark:bg-neutral-800"></div>
+<div class="flex items-center space-x-2">
+<span class="text-xs font-semibold text-neutral-950 dark:text-white tracking-tight">Financial Overview</span>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<section class="p-8 lg:p-12 max-w-7xl w-full mx-auto space-y-12">
+<!-- Header Section with Asymmetry -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-8">
+<h2 class="text-4xl font-semibold tracking-tight text-primary mb-2">Financial Overview</h2>
+<p class="text-on-surface-variant max-w-xl text-lg leading-relaxed">
+                        Manage your enterprise billing, track project milestones, and maintain a seamless cash flow with detailed architectural reporting.
+                    </p>
+</div>
+<div class="lg:col-span-4 flex justify-end">
+<div class="flex -space-x-2">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="credit_card">credit_card</span>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="account_balance">account_balance</span>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Grid Layout for Summary -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Current Balance Card (Prominent) -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between min-h-[240px]">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-label text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-1">Current Balance</p>
+<h3 class="text-5xl font-semibold tracking-tighter text-primary">$12,450.00</h3>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-8 flex items-center space-x-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-medium text-sm hover:opacity-90 transition-all flex items-center space-x-2">
+<span>Pay Outstanding Invoices</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="text-primary font-medium text-sm px-4 py-2 hover:bg-surface-container-low rounded-lg transition-colors">
+                            Download Statement
+                        </button>
+</div>
+</div>
+<!-- Secondary Metric Card -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between">
+<div>
+<p class="text-label text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-1">Next Due Date</p>
+<h4 class="text-2xl font-medium tracking-tight text-primary">October 24, 2023</h4>
+</div>
+<div class="pt-4 mt-auto">
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3"></div>
+</div>
+<p class="text-[10px] mt-2 text-on-surface-variant font-medium">Auto-pay scheduled for midnight</p>
+</div>
+</div>
+</div>
+<!-- Invoice Table Section -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden">
+<div class="px-8 py-6 border-b border-surface-container">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-medium text-primary">Recent Invoices</h3>
+<div class="flex items-center space-x-2">
+<button class="p-2 hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="filter_list">filter_list</span>
+</button>
+<button class="p-2 hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-8 py-4 text-label text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant">Description</th>
+<th class="px-8 py-4 text-label text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant">Due Date</th>
+<th class="px-8 py-4 text-label text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant">Amount</th>
+<th class="px-8 py-4 text-label text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant">Status</th>
+<th class="px-8 py-4 text-label text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-primary">Project "Ethereal" - Milestone 2</span>
+<span class="text-[10px] text-on-surface-variant">INV-2023-084</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">Oct 12, 2023</td>
+<td class="px-8 py-5 text-sm font-semibold text-primary">$4,200.00</td>
+<td class="px-8 py-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-surface-container-highest text-primary">
+<span class="w-1 h-1 rounded-full bg-primary mr-1.5"></span>
+                                        Pending
+                                    </span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="text-primary hover:underline text-xs font-semibold">View PDF</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-primary">Annual CRM Subscription</span>
+<span class="text-[10px] text-on-surface-variant">INV-2023-079</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">Oct 05, 2023</td>
+<td class="px-8 py-5 text-sm font-semibold text-primary">$1,250.00</td>
+<td class="px-8 py-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-surface-container-highest text-primary">
+<span class="w-1 h-1 rounded-full bg-primary mr-1.5"></span>
+                                        Processing
+                                    </span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="text-primary hover:underline text-xs font-semibold">View PDF</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-8 py-5">
+<div class="flex flex-col">
+<span class="text-sm font-medium text-primary">Consultancy - Q3 Strategy</span>
+<span class="text-[10px] text-on-surface-variant">INV-2023-072</span>
+</div>
+</td>
+<td class="px-8 py-5 text-sm text-on-surface-variant">Sep 28, 2023</td>
+<td class="px-8 py-5 text-sm font-semibold text-primary">$7,000.00</td>
+<td class="px-8 py-5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-surface-container text-outline">
+<span class="w-1 h-1 rounded-full bg-outline mr-1.5"></span>
+                                        Paid
+                                    </span>
+</td>
+<td class="px-8 py-5 text-right">
+<button class="text-primary hover:underline text-xs font-semibold">Receipt</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Integration Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="text-sm font-semibold tracking-widest uppercase text-on-surface-variant">Payment Methods</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center space-x-3 border border-transparent hover:border-outline-variant/30 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="credit_card">credit_card</span>
+<div>
+<p class="text-xs font-semibold text-primary">Visa ending in 4242</p>
+<p class="text-[10px] text-on-surface-variant">Expires 12/26</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center space-x-3 border border-transparent hover:border-outline-variant/30 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<div>
+<p class="text-xs font-semibold text-primary">Chase Business</p>
+<p class="text-[10px] text-on-surface-variant">Connected</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-semibold tracking-widest uppercase text-on-surface-variant">Quick Actions</h4>
+<div class="flex flex-wrap gap-3">
+<button class="bg-surface-container-highest px-4 py-2 rounded text-xs font-semibold flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm" data-icon="history">history</span>
+<span>Billing History</span>
+</button>
+<button class="bg-surface-container-highest px-4 py-2 rounded text-xs font-semibold flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm" data-icon="receipt_long">receipt_long</span>
+<span>Tax Documents</span>
+</button>
+<button class="bg-surface-container-highest px-4 py-2 rounded text-xs font-semibold flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm" data-icon="support_agent">support_agent</span>
+<span>Billing Support</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Visual Hint -->
+<footer class="mt-auto py-8 px-12 border-t border-surface-container flex justify-between items-center text-[10px] text-outline font-medium uppercase tracking-widest">
+<span>© 2023 Zethub Architecture CRM</span>
+<div class="flex space-x-6">
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Security</a>
+</div>
+</footer>
+</main>
+<!-- Mobile BottomNavBar (Hidden on desktop) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-black/80 backdrop-blur-xl border-t border-neutral-100 flex justify-around py-3 px-6 z-50">
+<a class="flex flex-col items-center text-neutral-400" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+</a>
+<a class="flex flex-col items-center text-neutral-400" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+</a>
+<a class="flex flex-col items-center text-neutral-950" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</a>
+<a class="flex flex-col items-center text-neutral-400" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</a>
+</nav>
+</body></html>

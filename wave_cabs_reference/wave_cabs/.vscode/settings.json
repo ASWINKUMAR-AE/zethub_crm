@@ -1,0 +1,24 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit"
+  },
+  "scm.alwaysShowActions": true,
+  "scm.alwaysShowRepositories": true,
+  "blackbox.mcpMarketplace.enabled": false,
+  "blackbox.mcp.mode": "off",
+  "trae.codeCompletionPro": {
+    "enableCodeCompletionPro": true,
+    "enableTabKeyboardShortcuts": true
+  },
+  "trae.advanced": {
+    
+    "logLevel": "info",
+    "logFile": false,
+    "outOfScopeProcess": false,
+    "debounceInterval": 125,
+    "proxyMode": "system",
+    "proxyUrl": ""
+  }
+}

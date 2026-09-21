@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zethub CRM | Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#777777",
+              "primary": "#000000",
+              "on-tertiary-fixed": "#ffffff",
+              "tertiary-fixed-dim": "#464747",
+              "on-secondary-fixed": "#1b1c1c",
+              "error": "#ba1a1a",
+              "surface-dim": "#dadada",
+              "surface-variant": "#e2e2e2",
+              "surface-bright": "#f9f9f9",
+              "error-container": "#ffdad6",
+              "on-secondary-container": "#1b1c1c",
+              "on-background": "#1a1c1c",
+              "secondary": "#5f5e5e",
+              "primary-fixed": "#5e5e5e",
+              "on-tertiary-container": "#ffffff",
+              "surface-container-high": "#e8e8e8",
+              "inverse-primary": "#c6c6c6",
+              "surface": "#f9f9f9",
+              "secondary-container": "#d6d4d3",
+              "tertiary-fixed": "#5e5e5e",
+              "on-tertiary": "#e3e2e2",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "secondary-fixed": "#c8c6c6",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#f1f1f1",
+              "on-error-container": "#410002",
+              "on-primary-fixed": "#ffffff",
+              "surface-container-low": "#f3f3f3",
+              "on-tertiary-fixed-variant": "#e3e2e2",
+              "background": "#f9f9f9",
+              "surface-container-lowest": "#ffffff",
+              "tertiary": "#3b3b3c",
+              "tertiary-container": "#747474",
+              "surface-container": "#eeeeee",
+              "inverse-surface": "#2f3131",
+              "on-primary": "#e2e2e2",
+              "surface-tint": "#5e5e5e",
+              "on-primary-container": "#ffffff",
+              "primary-container": "#3b3b3b",
+              "outline-variant": "#c6c6c6",
+              "primary-fixed-dim": "#474747",
+              "on-surface-variant": "#474747",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "surface-container-highest": "#e2e2e2",
+              "secondary-fixed-dim": "#acabaa",
+              "on-surface": "#1a1c1c",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .tonal-shift {
+        background: linear-gradient(180deg, #f3f3f3 0%, #f9f9f9 100%);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-4 h-screen w-64 border-r border-neutral-100 dark:border-neutral-900 bg-white dark:bg-black z-50">
+<div class="mb-8 px-2">
+<h1 class="text-xl font-semibold tracking-tighter text-black dark:text-white">Zethub</h1>
+<p class="text-xs text-neutral-500 font-['Inter']">CRM Enterprise</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 transition-colors text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-neutral-900 font-['Inter'] font-medium text-sm tracking-tight rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 transition-colors text-black dark:text-white font-semibold bg-neutral-100 dark:bg-neutral-800 font-['Inter'] font-medium text-sm tracking-tight rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span>
+<span>Accounts</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 transition-colors text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-neutral-900 font-['Inter'] font-medium text-sm tracking-tight rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="monetization_on">monetization_on</span>
+<span>Deals</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 transition-colors text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-neutral-900 font-['Inter'] font-medium text-sm tracking-tight rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="bar_chart">bar_chart</span>
+<span>Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 transition-colors text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-neutral-900 font-['Inter'] font-medium text-sm tracking-tight rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Contacts</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 transition-colors text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-neutral-900 font-['Inter'] font-medium text-sm tracking-tight rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto p-2">
+<button class="w-full bg-primary text-on-primary py-2.5 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-transform duration-200">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                New Deal
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-64 min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<header class="flex justify-between items-center px-8 sticky top-0 z-40 w-full h-16 border-b border-neutral-100 dark:border-neutral-900 bg-white/80 dark:bg-black/80 backdrop-blur-xl">
+<div class="flex items-center flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-lg" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-primary/20 placeholder:text-neutral-400" placeholder="Search projects..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6 ml-8">
+<button class="text-neutral-400 hover:text-black transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-neutral-400 hover:text-black transition-opacity">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-neutral-200 overflow-hidden">
+<img alt="User Profile" data-alt="professional corporate headshot of a man with a neutral expression in a bright studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtXAbe3Vwv4Nvq8gYJZuJPIrss5yLHe9JaSz-Gh2nhyFOM7FNJZxxwJjUOZ9q1lEb48-NOcCRDSijvTckzD2YeGOGUkRbwHFDjSnfGvU9dATlc3y166c8hcsnmOEa7gEaIaRZdI1eEz5D6AkNppUgJPMkxh9vDEaDojv7uLQ8xuj4vrC5qTajMEMm-zI5rt7XO27cTHXMjlrxXep4zC6e-AeRJ-bWfVyzqkAkmiq0KvR4icgYj48cdn1wGBChulNssSQairhDTfCE"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-10 space-y-8 flex-1">
+<!-- Header Section -->
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<h2 class="text-3xl font-semibold tracking-tight text-primary font-headline">Projects</h2>
+<p class="text-on-surface-variant text-sm">Manage enterprise initiatives and client deliverables.</p>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold text-sm flex items-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                    Add New Project
+                </button>
+</div>
+<!-- Dashboard Style Metrics (Bento Pattern) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-transparent shadow-sm flex flex-col gap-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Active Projects</span>
+<span class="text-4xl font-semibold text-primary">12</span>
+<div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden mt-2">
+<div class="bg-primary h-full w-[75%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-transparent shadow-sm flex flex-col gap-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Pending Approval</span>
+<span class="text-4xl font-semibold text-primary">04</span>
+<div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden mt-2">
+<div class="bg-neutral-400 h-full w-[30%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-transparent shadow-sm flex flex-col gap-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Completed Q4</span>
+<span class="text-4xl font-semibold text-primary">28</span>
+<div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden mt-2">
+<div class="bg-primary h-full w-[90%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-transparent shadow-sm flex flex-col gap-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Average Velocity</span>
+<span class="text-4xl font-semibold text-primary">94%</span>
+<div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden mt-2">
+<div class="bg-primary h-full w-[94%]"></div>
+</div>
+</div>
+</div>
+<!-- Table Section -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Project Name</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Client</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Status</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Deadline</th>
+<th class="px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-lg" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<div>
+<p class="font-medium text-sm text-primary">SaaS Platform Redesign</p>
+<p class="text-xs text-on-surface-variant">UI/UX Modernization</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">Acme Corp</p>
+<p class="text-xs text-on-surface-variant">Tier 1 Client</p>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-primary text-on-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                                        In Progress
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">Dec 12, 2026</p>
+<p class="text-xs text-on-surface-variant">14 days left</p>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-surface-container-highest rounded-lg transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg" data-icon="analytics">analytics</span>
+</div>
+<div>
+<p class="font-medium text-sm text-primary">Marketing Automation</p>
+<p class="text-xs text-on-surface-variant">Integration Suite</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">Globex Ltd</p>
+<p class="text-xs text-on-surface-variant">Standard Tier</p>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-surface-container-highest text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                                        Pending
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">Jan 05, 2027</p>
+<p class="text-xs text-on-surface-variant">Review Phase</p>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-surface-container-highest rounded-lg transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-lg" data-icon="terminal">terminal</span>
+</div>
+<div>
+<p class="font-medium text-sm text-primary">API Security Audit</p>
+<p class="text-xs text-on-surface-variant">Backend Compliance</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">Cyberdyne Inc</p>
+<p class="text-xs text-on-surface-variant">Strategic Partner</p>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-primary text-on-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                                        In Progress
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">Feb 18, 2027</p>
+<p class="text-xs text-on-surface-variant">In Testing</p>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-surface-container-highest rounded-lg transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg" data-icon="design_services">design_services</span>
+</div>
+<div>
+<p class="font-medium text-sm text-primary">Brand Identity 2.0</p>
+<p class="text-xs text-on-surface-variant">Creative Workshop</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">Initech Ventures</p>
+<p class="text-xs text-on-surface-variant">Tier 2 Client</p>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-surface-container-highest text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                                        Pending
+                                    </span>
+</td>
+<td class="px-6 py-5">
+<p class="text-sm font-medium">Mar 12, 2027</p>
+<p class="text-xs text-on-surface-variant">On Deck</p>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="p-2 hover:bg-surface-container-highest rounded-lg transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Empty Space Footer -->
+<div class="h-12"></div>
+</div>
+</main>
+</body></html>

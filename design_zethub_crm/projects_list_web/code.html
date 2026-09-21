@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zethub CRM - Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#c6c6c6",
+                        "surface-dim": "#dadada",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9f9",
+                        "outline-variant": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "primary-fixed-dim": "#474747",
+                        "secondary-container": "#d6d4d3",
+                        "outline": "#777777",
+                        "on-tertiary-fixed-variant": "#e3e2e2",
+                        "secondary-fixed-dim": "#acabaa",
+                        "on-primary": "#e2e2e2",
+                        "on-primary-container": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#1b1c1c",
+                        "on-error-container": "#410002",
+                        "background": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "tertiary": "#3b3b3c",
+                        "on-tertiary-fixed": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-fixed-dim": "#464747",
+                        "primary-container": "#3b3b3b",
+                        "on-surface-variant": "#474747",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "tertiary-container": "#747474",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-variant": "#e2e2e2",
+                        "secondary": "#5f5e5e",
+                        "primary-fixed": "#5e5e5e",
+                        "inverse-surface": "#2f3131",
+                        "surface-container": "#eeeeee",
+                        "primary": "#000000",
+                        "surface-tint": "#5e5e5e",
+                        "tertiary-fixed": "#5e5e5e",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#ffffff",
+                        "secondary-fixed": "#c8c6c6",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary": "#e3e2e2",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-primary-fixed": "#ffffff"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e2e2e2;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="text-on-surface overflow-hidden">
+<!-- SideNavBar Component -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-neutral-200 bg-neutral-50 flex flex-col p-4 z-50">
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" data-icon="dashboard">dashboard</span>
+</div>
+<div>
+<h1 class="text-xl font-semibold tracking-tight text-neutral-900">Zethub</h1>
+<p class="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">CRM Team Panel</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 hover:text-neutral-700 hover:bg-neutral-200/50 transition-colors rounded-lg font-['Inter'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-900 font-semibold bg-neutral-200 rounded-lg font-['Inter'] text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<span>Projects</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 hover:text-neutral-700 hover:bg-neutral-200/50 transition-colors rounded-lg font-['Inter'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span>Milestones</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 hover:text-neutral-700 hover:bg-neutral-200/50 transition-colors rounded-lg font-['Inter'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Submissions</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 hover:text-neutral-700 hover:bg-neutral-200/50 transition-colors rounded-lg font-['Inter'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-neutral-200">
+<div class="flex items-center gap-3 px-2">
+<img alt="User Profile" class="w-10 h-10 rounded-full object-cover" data-alt="close-up portrait of a professional man in a sharp white shirt against a minimalist grey studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7RNhqqPjHqjbmUbyNBfqqPYq88-f8sMq-28B0X9hrAapBpA9BsTSgtVWTvQvHe0a3_h0F15KDp763oIl_c0_lEqcuM_yFoq0GNI2VJwystC0HQ6JZz5oaJUGRtvujWB6VKKiSIv_9GQc0F-cDQ0AubSSL3LNYGG2rI_u8xIxR7Z6spzuRv_923UWga6VH3E_ujMH1ThpjqUOyDmUKXzWzpkpaebDSxaVyaxxASSJEvJIbrQwtwOLtdsyNpZJHJN1vCDVgeDqWNQ0"/>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold text-neutral-900 truncate">Alex Rivera</p>
+<p class="text-xs text-neutral-500 truncate">Lead Designer</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar Component -->
+<header class="fixed top-0 right-0 left-64 h-16 z-40 bg-white/80 backdrop-blur-xl border-b border-neutral-100 flex justify-between items-center px-8">
+<div class="flex items-center gap-4 w-96">
+<span class="material-symbols-outlined text-neutral-400" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-sm font-['Inter'] text-neutral-900 placeholder-neutral-400" placeholder="Search projects, tasks, or team..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-neutral-500 hover:text-neutral-900 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-neutral-500 hover:text-neutral-900 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-[1px] bg-neutral-200 mx-2"></div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded text-xs font-semibold hover:opacity-90 transition-opacity">
+                NEW PROJECT
+            </button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-16 p-8 min-h-screen custom-scrollbar overflow-y-auto">
+<!-- Dashboard Header Asymmetry -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="max-w-2xl">
+<h2 class="text-4xl font-semibold tracking-tight text-primary mb-2">Projects Architecture</h2>
+<p class="text-on-surface-variant leading-relaxed">System-wide overview of active development streams. Priority mapping and deadline tracking for the CRM infrastructure.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-lowest px-6 py-4 rounded-xl shadow-sm border border-neutral-100 flex flex-col min-w-[140px]">
+<span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-1">Active</span>
+<span class="text-2xl font-semibold text-neutral-900">24</span>
+</div>
+<div class="bg-surface-container-lowest px-6 py-4 rounded-xl shadow-sm border border-neutral-100 flex flex-col min-w-[140px]">
+<span class="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-1">Due Week</span>
+<span class="text-2xl font-semibold text-neutral-900">08</span>
+</div>
+</div>
+</div>
+<!-- Filters Section -->
+<div class="flex items-center gap-6 mb-8 overflow-x-auto pb-2 no-scrollbar">
+<button class="text-sm font-medium text-primary border-b-2 border-primary pb-2 whitespace-nowrap">All Projects</button>
+<button class="text-sm font-medium text-neutral-400 hover:text-neutral-700 transition-colors pb-2 whitespace-nowrap">My Assignments</button>
+<button class="text-sm font-medium text-neutral-400 hover:text-neutral-700 transition-colors pb-2 whitespace-nowrap">High Priority</button>
+<button class="text-sm font-medium text-neutral-400 hover:text-neutral-700 transition-colors pb-2 whitespace-nowrap">Completed</button>
+<button class="text-sm font-medium text-neutral-400 hover:text-neutral-700 transition-colors pb-2 whitespace-nowrap">Archive</button>
+</div>
+<!-- Main Projects Table Card -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_32px_64px_rgba(26,28,28,0.04)] border border-neutral-100">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-4 text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Project Name</th>
+<th class="px-6 py-4 text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Status</th>
+<th class="px-6 py-4 text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Deadline</th>
+<th class="px-6 py-4 text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Priority</th>
+<th class="px-6 py-4 text-[10px] font-bold text-neutral-500 uppercase tracking-widest text-right">Team</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-neutral-50">
+<!-- Row 1 -->
+<tr class="hover:bg-surface transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-neutral-100 flex items-center justify-center group-hover:bg-neutral-200 transition-colors">
+<span class="material-symbols-outlined text-neutral-600" data-icon="token">token</span>
+</div>
+<div>
+<p class="text-sm font-medium text-neutral-900">Alpha CRM Redesign</p>
+<p class="text-xs text-neutral-400">Core Infrastructure</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700">
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-400 mr-1.5"></span>
+                                In Progress
+                            </span>
+</td>
+<td class="px-6 py-5 text-sm text-neutral-600">Oct 24, 2023</td>
+<td class="px-6 py-5">
+<span class="text-xs font-bold text-primary uppercase tracking-tighter bg-neutral-100 px-2 py-1 rounded">High</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end -space-x-2">
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="professional woman headshot with neutral lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADobL_yUpeJboDh3Lc-P_IN6Z-eEqtnXvQxNcZhLuLrlMY4pU_PdIh2J4Zan5owyTrIGrVS5YQ-rUn64-OlucUpfP9dT8RewWDIyHWTSNSaAV8ISzQ8Qkw9OyytuXbLcL1qTkVdRXiTRIDcA9mDNeh8tstPkuBCKuw3RotLziF_Xou3Aqq5HIjJQqS_b_ZDH9UL6_s_AL-8zrA8W8swIy8MWAY_HbFw0vlgyZ0Z6jyMNxp5xQi4oO6hVKS3X5CnFb2R2q0UjjQ_nw"/>
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="man in studio with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr5w0DGSGZzsk4_cuI3Y52s1rTdDbGidFF9xarzLutjqGxeRQd03WyC67wd80wvk43aPGcvS-D6zNIEf9Ik-WQ091qY3QXvr6po7TiWozBnuhFan2gUV_-ZeMFXvTLeZKGnMIKfQ8nWVdkQ7P0pkMHfKMyx8-JBiXtiQX0e23sxCnWpEYOSDPXGwZPNkTQ_ZC_peRPuIHInOCIVfBEq9-A3Ux4sb7a1cryrhJtlR3cN39xsNdFzkHzFKS-0g4jDMOupRY3bB2YCe8"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-neutral-200 flex items-center justify-center text-[10px] font-bold text-neutral-600">+4</div>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-neutral-100 flex items-center justify-center group-hover:bg-neutral-200 transition-colors">
+<span class="material-symbols-outlined text-neutral-600" data-icon="database">database</span>
+</div>
+<div>
+<p class="text-sm font-medium text-neutral-900">Data Migration Phase II</p>
+<p class="text-xs text-neutral-400">Database &amp; Security</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-neutral-900 text-white">
+<span class="w-1.5 h-1.5 rounded-full bg-white mr-1.5"></span>
+                                Active
+                            </span>
+</td>
+<td class="px-6 py-5 text-sm text-neutral-600">Nov 12, 2023</td>
+<td class="px-6 py-5">
+<span class="text-xs font-bold text-neutral-400 uppercase tracking-tighter bg-neutral-50 px-2 py-1 rounded">Medium</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end -space-x-2">
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="male corporate profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9gdlvVfvdEsWu356cvZAryxGmBHDacqJYdkOzyttNWhyyt4vH_RElfWLfdMI7q3AmNowguRMJtPCO1v3R7qsET-EGjWH0UInlYYEvFSAWzqN7vwl4DhTiYvQH4ifCcVum3jLnhi9ija2weSv2IAfLgV2aWID6sPP4-OV-m8AOoWlyFbHM7hxA1vEexhWbj7_VAM6bRuN_rVKbkXKoTXmsV998n9jcCYflAAM8LVzJjKZc9KovbbfMVlykYNxBCNwmRgseCjJM-Eg"/>
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="professional person looking at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDclDyHiSei8e4uEKfN8NrFolaNQrWkfoRX5-ye-QP79t8LbJjA9K-xj3rX3MJYHbqMgo0gYizydWhJCnyzObSI2eizu4eriHaTF8_52tGrfKUSbR9VkvlFadYC-AjvgNjLGSdWe-SLxxZEvN7Iev64dPHq8taGQcqzZgmnUoW17z7p4WwQ-IO7kZ1zw0x6d31fGvu6UfhKc3h_WlytyXhmetdQw8YMa9lHUp8kg-5hkQ93zwauTZ2uroyfE-xuBSJGUCR93f5Su6U"/>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-neutral-100 flex items-center justify-center group-hover:bg-neutral-200 transition-colors">
+<span class="material-symbols-outlined text-neutral-600" data-icon="api">api</span>
+</div>
+<div>
+<p class="text-sm font-medium text-neutral-900">API Gateway Integration</p>
+<p class="text-xs text-neutral-400">External Services</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700">
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-400 mr-1.5"></span>
+                                Planning
+                            </span>
+</td>
+<td class="px-6 py-5 text-sm text-neutral-600">Dec 05, 2023</td>
+<td class="px-6 py-5">
+<span class="text-xs font-bold text-neutral-400 uppercase tracking-tighter bg-neutral-50 px-2 py-1 rounded">Low</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end -space-x-2">
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="woman face in high key lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS3MeQfI8qErczWI68YYdu3BnxO-L9zYAZ4mo-X5N66JcdKG57zvf5uQ7gpjLNbbl9DZY-oFSTb22bzX7GRO8usH_UmOTMK_v_GOrbxUvHXZuXTXF7wq_MzkfffIbAywsY656JLCn74NU6PTuEmB9sQ8Ts4bEpR2481HuG2957IgO3rGGAGmm2SGwN8_hviO9xzsBDV1b6Cmtq4Vr76GW0slwxrnL0uEnBm2tEo5dlsT3aohP6d2XHoSoH6Z_JhvucfQwkZvkE0sE"/>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-neutral-100 flex items-center justify-center group-hover:bg-neutral-200 transition-colors">
+<span class="material-symbols-outlined text-neutral-600" data-icon="shield">shield</span>
+</div>
+<div>
+<p class="text-sm font-medium text-neutral-900">Security Audit 2023</p>
+<p class="text-xs text-neutral-400">Compliance</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-neutral-100 text-neutral-700">
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-400 mr-1.5"></span>
+                                Review
+                            </span>
+</td>
+<td class="px-6 py-5 text-sm text-neutral-600">Oct 15, 2023</td>
+<td class="px-6 py-5">
+<span class="text-xs font-bold text-primary uppercase tracking-tighter bg-neutral-100 px-2 py-1 rounded">Critical</span>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end -space-x-2">
+<img alt="Team member" class="w-8 h-8 rounded-full border-2 border-white" data-alt="professional male portrait with minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD48BCZNz72tiSsKLGksMfUOnzwZ8wtQBJBMUIe35kuC6ZtKFmikTBmZO0okpf2xKZsxQjxzqWKJooTpiOeusUfTkV6OMZ76lHyVbcff4loAGhG5qM_hEpaVIfIw7VfpbcB65w0MyQO7p4kk-tmd4wnBJq464puWNkkChQQ2kwOLR7-m63wa9XOzO3pGVG0jRSMyaCyy6rM6hyY0oNJ-kah4WFGtYnyxORffDnR_w6UFktcje1w0zRsGql53c2zjQw1g3tZ-TX_bLA"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-neutral-200 flex items-center justify-center text-[10px] font-bold text-neutral-600">+2</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Pagination-like Footer -->
+<div class="px-6 py-4 border-t border-neutral-50 flex items-center justify-between bg-surface-container-low/30">
+<p class="text-xs text-neutral-500 font-medium uppercase tracking-widest">Displaying 4 of 24 projects</p>
+<div class="flex gap-2">
+<button class="p-2 text-neutral-400 hover:text-neutral-900 transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="p-2 text-neutral-900 transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Insights Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-neutral-100 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-neutral-400" data-icon="bolt">bolt</span>
+<h3 class="text-sm font-semibold text-neutral-900 uppercase tracking-widest text-[10px]">Team Velocity</h3>
+</div>
+<div class="space-y-4">
+<div class="h-2 w-full bg-neutral-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%] rounded-full"></div>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-neutral-500">Milestone progress</span>
+<span class="font-bold text-neutral-900">75%</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-neutral-100 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-neutral-400" data-icon="warning">warning</span>
+<h3 class="text-sm font-semibold text-neutral-900 uppercase tracking-widest text-[10px]">At Risk</h3>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-semibold text-neutral-900">03</span>
+<span class="text-xs text-neutral-400">Project streams</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-neutral-100 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-neutral-400" data-icon="calendar_today">calendar_today</span>
+<h3 class="text-sm font-semibold text-neutral-900 uppercase tracking-widest text-[10px]">Next Milestone</h3>
+</div>
+<div>
+<p class="text-sm font-medium text-neutral-900">UX Validation Phase</p>
+<p class="text-xs text-neutral-400 mt-1">Due in 2 days • Oct 18</p>
+</div>
+</div>
+</div>
+</main>
+</body></html>

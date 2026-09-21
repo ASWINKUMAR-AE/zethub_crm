@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zethub CRM - Milestones</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#c6c6c6",
+              "surface-dim": "#dadada",
+              "error": "#ba1a1a",
+              "surface": "#f9f9f9",
+              "outline-variant": "#c6c6c6",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "primary-fixed-dim": "#474747",
+              "secondary-container": "#d6d4d3",
+              "outline": "#777777",
+              "on-tertiary-fixed-variant": "#e3e2e2",
+              "secondary-fixed-dim": "#acabaa",
+              "on-primary": "#e2e2e2",
+              "on-primary-container": "#ffffff",
+              "on-secondary": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-secondary-container": "#1b1c1c",
+              "on-error-container": "#410002",
+              "background": "#f9f9f9",
+              "on-surface": "#1a1c1c",
+              "tertiary": "#3b3b3c",
+              "on-tertiary-fixed": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f3f3f3",
+              "surface-container-high": "#e8e8e8",
+              "tertiary-fixed-dim": "#464747",
+              "primary-container": "#3b3b3b",
+              "on-surface-variant": "#474747",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "tertiary-container": "#747474",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-variant": "#e2e2e2",
+              "secondary": "#5f5e5e",
+              "primary-fixed": "#5e5e5e",
+              "inverse-surface": "#2f3131",
+              "surface-container": "#eeeeee",
+              "primary": "#000000",
+              "surface-tint": "#5e5e5e",
+              "tertiary-fixed": "#5e5e5e",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#ffffff",
+              "secondary-fixed": "#c8c6c6",
+              "surface-container-highest": "#e2e2e2",
+              "surface-bright": "#f9f9f9",
+              "on-background": "#1a1c1c",
+              "on-tertiary": "#e3e2e2",
+              "on-secondary-fixed": "#1b1c1c",
+              "on-primary-fixed": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Inter', sans-serif; }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900 flex flex-col p-4 z-50">
+<div class="flex items-center gap-3 px-2 mb-10">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-xl">dataset</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">Zethub</span>
+<span class="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">CRM Team Panel</span>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors rounded-lg font-['Inter'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors rounded-lg font-['Inter'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+                Projects
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-900 dark:text-neutral-50 font-semibold bg-neutral-200 dark:bg-neutral-800 rounded-lg font-['Inter'] text-sm" href="#">
+<span class="material-symbols-outlined">event_available</span>
+                Milestones
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors rounded-lg font-['Inter'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined">description</span>
+                Submissions
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-200/50 dark:hover:bg-neutral-800/50 transition-colors rounded-lg font-['Inter'] font-medium text-sm" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto p-2">
+<div class="flex items-center gap-3 p-2 rounded-xl bg-surface-container-low">
+<img alt="User Profile" class="w-10 h-10 rounded-full object-cover" data-alt="close-up portrait of a professional man in a minimal grey studio setting with soft directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOxoXmwWBAzrtuSqZzgT8Dh4-gNHH7ZsAQQqeCd0SBLU-1zbklfRUrSsupr82NQEN58WcN_segunVM0ZTl3HvMk7uhgHSM56f2_qNugJSNO4nsvGckbn_VniSXMSY_KoRlx4lmCXspzLfKE0PAB_FaeZLQFHqIAq54Svg8sYV0zJyuCujUVRepXCbmpdS8oDMuOH6UDoxG8R7fREENvKq_W7x6hR2t9DrXOocchcin8uHTyRPM-b0V85A5BSrOF0fUQDONgdBQVQQ"/>
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-primary">Alex Rivera</span>
+<span class="text-[10px] text-on-surface-variant">Admin Lead</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 left-64 h-16 z-40 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-xl border-b border-neutral-100 dark:border-neutral-800">
+<div class="flex justify-between items-center px-8 h-full w-full">
+<div class="flex items-center bg-surface-container-low px-3 py-1.5 rounded-lg w-80">
+<span class="material-symbols-outlined text-outline text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full font-['Inter'] text-on-surface" placeholder="Search milestones..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<button class="flex items-center text-neutral-500 hover:text-neutral-900 transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex items-center text-neutral-500 hover:text-neutral-900 transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="h-6 w-[1px] bg-outline-variant/30"></div>
+<button class="bg-primary text-on-primary px-4 py-1.5 rounded-lg text-xs font-medium hover:opacity-90 transition-opacity">
+                    Create Milestone
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-16 min-h-screen bg-surface">
+<div class="max-w-7xl mx-auto p-8">
+<!-- Header Section with Asymmetry -->
+<div class="flex justify-between items-end mb-12">
+<div class="w-2/3">
+<h1 class="text-4xl font-semibold tracking-tight text-primary mb-2">Milestones</h1>
+<p class="text-on-surface-variant max-w-lg leading-relaxed">
+                        Track cross-functional progress across your core CRM initiatives. Manage deadlines, assignees, and delivery health in a unified view.
+                    </p>
+</div>
+<div class="flex gap-4">
+<div class="text-right">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-outline">Completion</span>
+<span class="text-2xl font-medium tracking-tighter">74.2%</span>
+</div>
+<div class="h-10 w-[1px] bg-outline-variant"></div>
+<div class="text-right">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-outline">Active Items</span>
+<span class="text-2xl font-medium tracking-tighter">18</span>
+</div>
+</div>
+</div>
+<!-- Bento Filter Bar -->
+<div class="grid grid-cols-12 gap-4 mb-8">
+<div class="col-span-8 flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-xs font-medium">All Projects</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface rounded-lg text-xs font-medium hover:bg-surface-container-high transition-colors">Core Engine</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface rounded-lg text-xs font-medium hover:bg-surface-container-high transition-colors">User Experience</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface rounded-lg text-xs font-medium hover:bg-surface-container-high transition-colors">API &amp; Security</button>
+</div>
+<div class="col-span-4 flex justify-end">
+<button class="flex items-center gap-2 px-4 py-2 border border-outline-variant/20 rounded-lg text-xs font-medium hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-sm">tune</span>
+                        Filter
+                    </button>
+</div>
+</div>
+<!-- Milestone Hybrid Table/Cards -->
+<div class="space-y-4">
+<!-- Table Header -->
+<div class="grid grid-cols-12 px-6 text-[10px] uppercase tracking-widest font-bold text-outline mb-2">
+<div class="col-span-4">Milestone Detail</div>
+<div class="col-span-2">Assigned To</div>
+<div class="col-span-2">Due Date</div>
+<div class="col-span-2 text-center">Status</div>
+<div class="col-span-2 text-right">Progress</div>
+</div>
+<!-- Milestone Row 1 -->
+<div class="grid grid-cols-12 items-center bg-surface-container-lowest hover:bg-white transition-all p-6 rounded-xl border border-transparent hover:border-neutral-200 group">
+<div class="col-span-4 pr-8">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">database</span>
+</div>
+<div>
+<h3 class="font-medium text-sm text-primary group-hover:underline underline-offset-4 decoration-1">Database Schema Migration v4.0</h3>
+<p class="text-xs text-on-surface-variant mt-1 line-clamp-1">Refactoring relational models for core client profiles.</p>
+</div>
+</div>
+</div>
+<div class="col-span-2">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="portrait of a software engineer smiling in a professional tech office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbxFYETbcdESle2zIdcuxE4Z4KsgO0ybVAXDap00rh2EZ8bXskH4P_2Dr8v76jS-6DBH9m_OQcQHZRVZ9uw3Ow8p0_Vest1jFZm2mnTSHXPgZ9tPAvWINe_cV4vS9y74KDYyg4rzI5HjSKxKSlYNYluopjButeU4D6ow5HBZx65dvQolRKYqQ2FGdNfdRXHT26xfkeUTSOyH_Hdu1cCf2KOpoVIW-UaFAuP5OhyIqcjFP4B-WmxRCCzQ7XqTKrljXbbMkMH10TiKQ"/>
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="professional woman in a modern workspace looking thoughtfully at camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcMjXsz6wGYDkTJbskjaJlHSFSwFuBg9EnfY20c8LDB2oGKqcDqOfGY1CWAaSJ5s3KG4jZehmqfpB6pz4UvdPZZx-n_QLXTVsf-j0FwPiEnruQ4vJmPQvRJ5Tj7KzMQm7qcxDG4WH1ViJ08rkBKBnAAkjuTOVy2Ayii2pjtyfYjT5g2kOVheqWYif8kNkJVUnP3z3iwM6Peq-4YXqwWkbzuKTGuX7VA8YtPkU_E_1iOl5xOcloLfLNqO1oTGP6i15wtKETVnLYaTw"/>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border-2 border-white flex items-center justify-center text-[10px] font-bold">+2</div>
+</div>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-primary">Oct 24, 2023</span>
+<span class="text-[10px] text-error font-medium">Overdue by 2d</span>
+</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-primary text-[10px] font-bold uppercase tracking-tight">Active</span>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col items-end">
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden mb-2">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+<span class="text-[10px] font-bold text-outline">85%</span>
+</div>
+</div>
+</div>
+<!-- Milestone Row 2 -->
+<div class="grid grid-cols-12 items-center bg-surface-container-lowest hover:bg-white transition-all p-6 rounded-xl border border-transparent hover:border-neutral-200 group">
+<div class="col-span-4 pr-8">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">palette</span>
+</div>
+<div>
+<h3 class="font-medium text-sm text-primary group-hover:underline underline-offset-4 decoration-1">Design System Audit &amp; Update</h3>
+<p class="text-xs text-on-surface-variant mt-1 line-clamp-1">Consolidating monochromatic tokens across all modules.</p>
+</div>
+</div>
+</div>
+<div class="col-span-2">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="close-up of a designer in a bright minimalist office workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg75TAaZy5QB7nWcloS_5R8WjTjoDsffOCZ9t5MWl-iSiLzcuShuc6HJZGgBq0_8rxB1QrkDVtcHzSmk3iUFbyRuyWjfZClJLlN4t640kyFSk1fKKK79U1d6813Ol0ECqZ9MVknGGUqizO7TL3ykoUPBk0K4h-KRmn2ABXl9U3ctt93DRBKgOG_9HBXjnvzxnmpG9ENcf4wU9wCqdrXxQMWEDboAlJrdYz7E_cCNergFaB-CSZJ6OqIEAeHHkBYrhm8O5ZV-i5KnY"/>
+</div>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-primary">Nov 12, 2023</span>
+<span class="text-[10px] text-on-surface-variant">In 14 days</span>
+</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-primary text-[10px] font-bold uppercase tracking-tight">On Deck</span>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col items-end">
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden mb-2">
+<div class="bg-primary h-full w-[12%]"></div>
+</div>
+<span class="text-[10px] font-bold text-outline">12%</span>
+</div>
+</div>
+</div>
+<!-- Milestone Row 3 -->
+<div class="grid grid-cols-12 items-center bg-surface-container-lowest hover:bg-white transition-all p-6 rounded-xl border border-transparent hover:border-neutral-200 group opacity-70">
+<div class="col-span-4 pr-8">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+</div>
+<div>
+<h3 class="font-medium text-sm text-primary group-hover:underline underline-offset-4 decoration-1">Auth Service OAuth Integration</h3>
+<p class="text-xs text-on-surface-variant mt-1 line-clamp-1">Enabling third-party enterprise login via Okta.</p>
+</div>
+</div>
+</div>
+<div class="col-span-2">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="portrait of a cybersecurity specialist in a dark tech-focused room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFTnitS6XJErHw2S-AVMvg7wyMVtCKjqtK-2QoqZCtmLd3kdm38QITL1g3u-JjxFJC3CMEVwNtW00fbny6W2TGobXqYaDpagZUxE3xW1_E36YJDaQOMziVF3wkcbhrmIadFLXtRQO1452dbuXU-bJQdQ8rXSLc2sywv7V2_0U0SDfy8q3c702ydwDNYVfBzEKBolAvgzHPmgJt8gNEyABtEvYhePhk_pjuOteaiM97mb4FG41VnL0B90l_9ajim70eil-oeeEHow0"/>
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="corporate leader in a minimalist boardroom with glass walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL7SgR2qQjl9sat1Ij9JsQ8OR-l_0MzUMEIco5GtQm_jhpMM055E8DAV0zw8fB4YvLmMB_FWVSoC9I6lVzbPYp81DnYd65_m8eoCJmAvBHlzwSH45jcTvxSEFtH6lr4gLUiQicKFjJ78IhIdovleAhBchfSv__RipMkmNrNMRy_vVz02ehVowEdp3C6H5KvKsjLxXZ8RO-tmQ5cw9rhfH2nlx_zLCjgviGHFObRvGvBjIZalC4A0H1iuHvG3okqCpaAhDY30tnniA"/>
+</div>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-primary text-line-through">Oct 18, 2023</span>
+<span class="text-[10px] text-on-surface-variant">Archived</span>
+</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary text-[10px] font-bold uppercase tracking-tight">Completed</span>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col items-end">
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden mb-2">
+<div class="bg-primary h-full w-[100%]"></div>
+</div>
+<span class="text-[10px] font-bold text-outline">100%</span>
+</div>
+</div>
+</div>
+<!-- Milestone Row 4 -->
+<div class="grid grid-cols-12 items-center bg-surface-container-lowest hover:bg-white transition-all p-6 rounded-xl border border-transparent hover:border-neutral-200 group">
+<div class="col-span-4 pr-8">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">insights</span>
+</div>
+<div>
+<h3 class="font-medium text-sm text-primary group-hover:underline underline-offset-4 decoration-1">Reporting Engine Scalability Test</h3>
+<p class="text-xs text-on-surface-variant mt-1 line-clamp-1">Stress testing data aggregation under 1M concurrent events.</p>
+</div>
+</div>
+</div>
+<div class="col-span-2">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="male executive sitting at a high-end office desk with clean lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_GOwoxnwUwngdhqwVoLz84OWJ8yjOtjF_KYXrvVEiM0ZzbxeP8QTJ3LNApQt1-MPWs4bj0xcgk6O3BzMzyp_6z1hlmeQ80EVH4uromfE_DcxYczTtGMgeOvvNYtLvagmlNay0U-I03xRnU2zotyQdUTRv8NZmMPwjTTjOzTe2BNM4VE50xv6ZXB8GZujjrzMGnzsuvx1yMk1RMIjOfDBubcfTfhN9jcc-_5NagnljN5wYAzUHUIB1lmKjdQk0LVmFo_pDf7sSk-4"/>
+</div>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col">
+<span class="text-xs font-medium text-primary">Dec 01, 2023</span>
+<span class="text-[10px] text-on-surface-variant">In 32 days</span>
+</div>
+</div>
+<div class="col-span-2 flex justify-center">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-primary text-[10px] font-bold uppercase tracking-tight">Active</span>
+</div>
+<div class="col-span-2">
+<div class="flex flex-col items-end">
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden mb-2">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+<span class="text-[10px] font-bold text-outline">45%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Asymmetric Footer / Data Visualization -->
+<div class="mt-12 grid grid-cols-12 gap-8">
+<div class="col-span-7 bg-surface-container-low p-8 rounded-2xl">
+<h4 class="text-xs font-bold uppercase tracking-widest text-outline mb-6">Activity Timeline</h4>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="relative">
+<div class="w-2 h-2 rounded-full bg-primary mt-1"></div>
+<div class="absolute top-3 bottom-[-24px] left-[3px] w-[1px] bg-outline-variant"></div>
+</div>
+<div>
+<p class="text-xs font-semibold text-primary">Database Schema Migration v4.0</p>
+<p class="text-[10px] text-on-surface-variant">Modified by David S. • 2 hours ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="relative">
+<div class="w-2 h-2 rounded-full bg-outline-variant mt-1"></div>
+<div class="absolute top-3 bottom-[-24px] left-[3px] w-[1px] bg-outline-variant"></div>
+</div>
+<div>
+<p class="text-xs font-semibold text-primary">Design System Audit &amp; Update</p>
+<p class="text-[10px] text-on-surface-variant">Assigned to Sarah M. • 5 hours ago</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="relative">
+<div class="w-2 h-2 rounded-full bg-outline-variant mt-1"></div>
+</div>
+<div>
+<p class="text-xs font-semibold text-primary">Milestone Completed: Auth Service</p>
+<p class="text-[10px] text-on-surface-variant">Verified by QA Team • Yesterday</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-5 flex flex-col justify-between">
+<div class="bg-primary text-on-primary p-8 rounded-2xl relative overflow-hidden group">
+<div class="relative z-10">
+<h4 class="text-[10px] uppercase font-bold tracking-widest opacity-60 mb-2">System Health</h4>
+<p class="text-3xl font-medium tracking-tighter mb-4">Stable</p>
+<p class="text-xs opacity-70 leading-relaxed">All critical paths for Q4 milestones are currently within acceptable delivery thresholds.</p>
+</div>
+<div class="absolute bottom-[-20px] right-[-20px] opacity-10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[160px]">shield</span>
+</div>
+</div>
+<div class="bg-surface-container-highest p-8 rounded-2xl flex items-center justify-between">
+<div>
+<h4 class="text-[10px] uppercase font-bold tracking-widest text-outline mb-1">Upcoming Milestone</h4>
+<p class="text-sm font-semibold text-primary">Core Engine Audit</p>
+</div>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

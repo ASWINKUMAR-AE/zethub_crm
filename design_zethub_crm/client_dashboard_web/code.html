@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zethub CRM - Client Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#1b1c1c",
+              "surface-container": "#eeeeee",
+              "on-background": "#1a1c1c",
+              "inverse-primary": "#c6c6c6",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "surface-container-lowest": "#ffffff",
+              "surface-variant": "#e2e2e2",
+              "primary": "#000000",
+              "tertiary-container": "#747474",
+              "on-primary": "#e2e2e2",
+              "on-primary-fixed": "#ffffff",
+              "secondary-fixed-dim": "#acabaa",
+              "tertiary-fixed-dim": "#464747",
+              "on-secondary-container": "#1b1c1c",
+              "on-error-container": "#410002",
+              "inverse-surface": "#2f3131",
+              "surface-tint": "#5e5e5e",
+              "secondary": "#5f5e5e",
+              "on-tertiary-fixed-variant": "#e3e2e2",
+              "tertiary-fixed": "#5e5e5e",
+              "outline-variant": "#c6c6c6",
+              "outline": "#777777",
+              "surface-dim": "#dadada",
+              "surface-container-low": "#f3f3f3",
+              "on-surface-variant": "#474747",
+              "on-tertiary-container": "#ffffff",
+              "surface-container-high": "#e8e8e8",
+              "primary-fixed-dim": "#474747",
+              "on-tertiary-fixed": "#ffffff",
+              "tertiary": "#3b3b3c",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "background": "#f9f9f9",
+              "secondary-fixed": "#c8c6c6",
+              "on-tertiary": "#e3e2e2",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "primary-fixed": "#5e5e5e",
+              "on-primary-container": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-surface": "#1a1c1c",
+              "surface-bright": "#f9f9f9",
+              "secondary-container": "#d6d4d3",
+              "primary-container": "#3b3b3b",
+              "surface": "#f9f9f9",
+              "surface-container-highest": "#e2e2e2",
+              "inverse-on-surface": "#f1f1f1"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-shift-bg { background-color: #f3f3f3; }
+      body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased flex overflow-hidden">
+<!-- SideNavBar Component -->
+<aside class="h-screen w-64 border-r border-neutral-200 dark:border-neutral-800 flex flex-col py-8 px-4 space-y-2 bg-neutral-50 dark:bg-neutral-900 font-sans antialiased text-sm font-medium tracking-tight">
+<div class="px-4 mb-8">
+<h1 class="text-lg font-semibold tracking-tighter text-neutral-950 dark:text-white">Zethub</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-neutral-400 font-bold">CRM Architecture</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Active Tab: Dashboard -->
+<a class="flex items-center gap-3 px-4 py-2 text-neutral-900 dark:text-white font-semibold bg-neutral-200/50 dark:bg-neutral-800/50 rounded-lg transition-all opacity-90" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="folder_open">folder_open</span>
+                Projects
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="event_upcoming">event_upcoming</span>
+                Milestones
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="payments">payments</span>
+                Payments
+            </a>
+</nav>
+<div class="mt-auto pt-4 border-t border-neutral-200 dark:border-neutral-800">
+<a class="flex items-center gap-3 px-4 py-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+                Settings
+            </a>
+</div>
+</aside>
+<div class="flex-1 flex flex-col h-screen overflow-hidden">
+<!-- TopNavBar Component -->
+<header class="sticky top-0 z-40 flex items-center justify-between px-8 w-full h-16 border-b border-neutral-100 dark:border-neutral-800 bg-white/80 dark:bg-black/80 backdrop-blur-xl font-sans text-sm tracking-normal">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-neutral-400 text-[18px]">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-2 focus:ring-1 ring-neutral-200 dark:ring-neutral-700 text-sm transition-all" placeholder="Search architecture projects..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-opacity">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of professional architect in black attire looking at camera against white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkw8UJwHFzUESG4T_MJ1ylmldU3AHhBt54hfXqNNFPsyKq2AFriBt7aBhADtJjYqbDenZjVV9B876K6i6VOSsPaTw4GIYpAYMBnTSRBdAMX7tT3dXnz9Em76NZkjfWxmbY9l7MjAF3_5KvCyyry937UjRSjnUYEvDsL58WEKIx4wZdTVpSqlqYgiktXWAsKCYOw8DJE6pD2_ZXdkn8LcavKyL9QL2BUsHgLEVJLEau6_V671jMTfzAYpiziYNoIcwjVZB1J8C6zoY"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto p-8 space-y-8">
+<!-- Header Section -->
+<div class="flex justify-between items-end">
+<div>
+<span class="text-[11px] font-semibold tracking-widest text-on-surface-variant uppercase mb-2 block">DASHBOARD</span>
+<h2 class="text-4xl font-semibold tracking-tight text-primary">Client Overview</h2>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-high px-4 py-2 text-sm font-medium rounded-lg hover:bg-surface-container-highest transition-colors">Download Report</button>
+<button class="bg-primary text-on-primary px-4 py-2 text-sm font-medium rounded-lg">New Request</button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- KPI Section (Asymmetric Bento) -->
+<div class="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- KPI: Project Progress -->
+<div class="col-span-1 md:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-transparent hover:border-outline-variant/20 transition-all group">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="text-sm font-medium text-on-surface-variant mb-1">Project Progress</p>
+<h3 class="text-2xl font-semibold tracking-tight">The Brutalist Villa</h3>
+</div>
+<span class="text-4xl font-bold tracking-tighter">74%</span>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-1000" style="width: 74%"></div>
+</div>
+<div class="mt-6 flex justify-between items-center text-xs font-semibold text-on-surface-variant uppercase tracking-wider">
+<span>Stage 4: Structural Engineering</span>
+<span>Est. Completion Aug 2024</span>
+</div>
+</div>
+<!-- KPI: Active Milestones -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-3 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-[20px]" data-icon="event_upcoming">event_upcoming</span>
+<p class="text-sm font-medium uppercase tracking-widest">Active Milestones</p>
+</div>
+<div>
+<span class="text-6xl font-bold tracking-tighter">12</span>
+<p class="text-sm text-on-surface-variant mt-2">3 pending approval today</p>
+</div>
+</div>
+<!-- KPI: Payment Health -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-3 text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-[20px]" data-icon="payments">payments</span>
+<p class="text-sm font-medium uppercase tracking-widest">Payment Health</p>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-2">
+<div class="h-2 w-2 rounded-full bg-primary"></div>
+<span class="text-2xl font-semibold tracking-tight">Excellent</span>
+</div>
+<p class="text-sm text-on-surface-variant">Next invoice due in 14 days</p>
+</div>
+</div>
+<!-- Secondary Metric: Resources -->
+<div class="col-span-1 md:col-span-2 bg-surface-container-low p-6 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-6">
+<div class="flex -space-x-2">
+<img class="h-10 w-10 rounded-full border-2 border-surface-container-low" data-alt="headshot of smiling designer wearing glasses in a professional studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfJocfp2qGj0Txo6RoOqLfdT8Lm7J2TVMBPbz4PRtZAiedEtvCSGrimNavi6CrxKSemZto4N259bzhyjEy4gGqTq9HpEU1FkF6Bw5aZhDb2QGqEVc7yE0MGm7mzib5zcYfkyuK2zdJ2Oo5_4suzQZerXGcqKitKvvuuUoQA6AgU8X_glA6qECAKpnjWFEqflTBfZbRnxStEEkqsoU6XyU7Gy95bvhv-sceT01odlkReVOdI__MX091PzksFNeU4KloY48CdXfP30M"/>
+<img class="h-10 w-10 rounded-full border-2 border-surface-container-low" data-alt="professional portrait of an engineer with dark hair and minimal aesthetic looking forward" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjEcALoFIUhAkh1I7zM-J_qrcMGA6Blwa1DTedi5KqrNNLnInrwg6K7vOvIA19ZtkO7IMT_jlWeUB6VM974a8iEszFmzixHSOwQnYJUwXv0NUmPf1vBvGgphAEXfQtHFtLQgcglqFi9sYAbiV5jHOhlRw20PtYyZP6f_ht0o1HX9jgDEldm4aDxC7VlfBb4Yerhh3bD5-gChWdYUqj__ZJfSFnZe_T6togDIcGm_cRLyYV4-ccTEl-QFBccJXQw_23ybtspK3pr2E"/>
+<div class="h-10 w-10 rounded-full border-2 border-surface-container-low bg-surface-container-high flex items-center justify-center text-[10px] font-bold">+3</div>
+</div>
+<div>
+<p class="text-sm font-semibold tracking-tight">Dedicated Architecture Team</p>
+<p class="text-xs text-on-surface-variant">Lead: Jonathan Ivy</p>
+</div>
+</div>
+<button class="text-primary font-semibold text-xs uppercase tracking-widest hover:underline transition-all">View Team</button>
+</div>
+</div>
+<!-- Recent Activity Feed -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+<h3 class="text-sm font-semibold uppercase tracking-widest mb-8 text-primary">Recent Activity</h3>
+<div class="space-y-8">
+<!-- Activity Item -->
+<div class="relative pl-6 pb-6 border-l border-surface-container-high">
+<div class="absolute -left-[5px] top-0 h-2 w-2 rounded-full bg-primary"></div>
+<div class="space-y-1">
+<p class="text-xs font-semibold text-on-surface-variant uppercase tracking-tighter">Today, 2:45 PM</p>
+<p class="text-sm font-medium text-primary">Site inspections uploaded for Phase 3</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Structural review completed by lead engineer with minor adjustments noted for the basement slab.</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="relative pl-6 pb-6 border-l border-surface-container-high">
+<div class="absolute -left-[5px] top-0 h-2 w-2 rounded-full bg-surface-container-highest"></div>
+<div class="space-y-1">
+<p class="text-xs font-semibold text-on-surface-variant uppercase tracking-tighter">Yesterday</p>
+<p class="text-sm font-medium text-primary">Payment Confirmed</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Invoice #CRM-9821 for Schematic Design has been successfully processed.</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="relative pl-6 pb-6 border-l border-surface-container-high">
+<div class="absolute -left-[5px] top-0 h-2 w-2 rounded-full bg-surface-container-highest"></div>
+<div class="space-y-1">
+<p class="text-xs font-semibold text-on-surface-variant uppercase tracking-tighter">May 12</p>
+<p class="text-sm font-medium text-primary">Milestone Achieved: Planning Permit</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">The city council has approved the structural plans for the main residence.</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="relative pl-6">
+<div class="absolute -left-[5px] top-0 h-2 w-2 rounded-full bg-surface-container-highest"></div>
+<div class="space-y-1">
+<p class="text-xs font-semibold text-on-surface-variant uppercase tracking-tighter">May 10</p>
+<p class="text-sm font-medium text-primary">Project Initiated</p>
+<p class="text-xs text-on-surface-variant leading-relaxed">Contract signed and digital workspace provisioned for 'The Brutalist Villa'.</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-12 py-3 border border-surface-container-high text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-surface-container-low transition-colors">View All History</button>
+</div>
+<!-- Contextual Card: Next Step -->
+<div class="bg-primary text-on-primary p-8 rounded-xl space-y-4">
+<span class="text-[10px] font-bold tracking-[0.2em] opacity-60 uppercase">Next Action</span>
+<h4 class="text-xl font-medium tracking-tight">Approve interior material palette by Friday</h4>
+<p class="text-sm opacity-80 leading-relaxed">Review the proposed marble and oak selections in the project folder.</p>
+<a class="inline-flex items-center gap-2 text-sm font-bold border-b border-on-primary pb-1 group" href="#">
+                            Go to Milestones
+                            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

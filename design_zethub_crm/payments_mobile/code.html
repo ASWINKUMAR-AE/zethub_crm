@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e2e2e2",
+              "outline-variant": "#c6c6c6",
+              "surface-container-high": "#e8e8e8",
+              "on-surface-variant": "#474747",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "secondary-container": "#d6d4d3",
+              "primary": "#000000",
+              "surface-tint": "#5e5e5e",
+              "on-tertiary-container": "#ffffff",
+              "on-primary": "#e2e2e2",
+              "surface-container-low": "#f3f3f3",
+              "outline": "#777777",
+              "on-surface": "#1a1c1c",
+              "background": "#f9f9f9",
+              "surface": "#f9f9f9",
+              "on-primary-fixed": "#ffffff",
+              "inverse-on-surface": "#f1f1f1",
+              "secondary-fixed": "#c8c6c6",
+              "secondary": "#5f5e5e",
+              "on-tertiary-fixed": "#ffffff",
+              "on-error-container": "#410002",
+              "tertiary-fixed": "#5e5e5e",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#ffffff",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#acabaa",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#464747",
+              "on-secondary-container": "#1b1c1c",
+              "surface-bright": "#f9f9f9",
+              "surface-dim": "#dadada",
+              "surface-variant": "#e2e2e2",
+              "on-background": "#1a1c1c",
+              "surface-container": "#eeeeee",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "primary-container": "#3b3b3b",
+              "error": "#ba1a1a",
+              "primary-fixed": "#5e5e5e",
+              "tertiary": "#3b3b3c",
+              "primary-fixed-dim": "#474747",
+              "inverse-surface": "#2f3131",
+              "tertiary-container": "#747474",
+              "on-tertiary-fixed-variant": "#e3e2e2",
+              "on-secondary-fixed": "#1b1c1c",
+              "inverse-primary": "#c6c6c6",
+              "on-tertiary": "#e3e2e2"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-neutral-50 dark:bg-neutral-950">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-neutral-900 dark:text-neutral-50 text-2xl hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors p-2 rounded-full cursor-pointer">grid_view</span>
+<h1 class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-50">Zethub</h1>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="minimalist portrait of a professional in grayscale soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdMGTNfbGNKUh1KZn2RSsGGM3YZ4pYkHjtYZDYXqEGbItdYffw4PDNuxpep7ehBl2B9YWtyXMboq0or8henAljKWsd9dqmB8Wf-8XCwKUwjjXVIYHgXlRV_idIYJxaZWHbyyfoVOKXSriNI0gt-n6kb5RQn4b2ARLtg93B6JJeCue3ejn2pXXDJwdONHZAm8bO7Gdw8cIOYvUpK5Gab00wZcSNEdBQZBajdeBVX2DciwKB5XtR5KE8PFvMVdOcjoa3cfhgQypw_nI"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-32 px-6 max-w-md mx-auto min-h-screen">
+<!-- Section Header -->
+<div class="mb-8 mt-4">
+<h2 class="text-3xl font-semibold tracking-tight text-primary">Payments</h2>
+<p class="text-on-surface-variant text-sm mt-1">Real-time revenue monitoring</p>
+</div>
+<!-- Metrics Bento (Asymmetric) -->
+<div class="grid grid-cols-2 gap-3 mb-10">
+<div class="col-span-2 bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
+<p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant mb-1">Monthly Volume</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-bold tracking-tighter">$42,850</span>
+<span class="text-xs font-medium text-on-surface-variant">+12%</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant mb-1">Active</p>
+<span class="text-xl font-semibold">142</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl">
+<p class="text-[10px] font-semibold uppercase tracking-[0.2em] text-on-surface-variant mb-1">Pending</p>
+<span class="text-xl font-semibold">08</span>
+</div>
+</div>
+<!-- Payments List -->
+<div class="space-y-3">
+<!-- Payment Item -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl border border-outline-variant/5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">receipt_long</span>
+</div>
+<div>
+<p class="text-sm font-medium text-primary">INV-2023-001</p>
+<p class="text-xs text-on-surface-variant">Oct 24, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold">$1,200.00</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-primary text-on-primary text-[10px] font-semibold rounded uppercase tracking-wider">Paid</span>
+</div>
+</div>
+<!-- Payment Item -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl border border-outline-variant/5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">payments</span>
+</div>
+<div>
+<p class="text-sm font-medium text-primary">INV-2023-002</p>
+<p class="text-xs text-on-surface-variant">Oct 23, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold">$450.00</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-surface-container-high text-on-surface-variant text-[10px] font-semibold rounded uppercase tracking-wider">Outstanding</span>
+</div>
+</div>
+<!-- Payment Item -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl border border-outline-variant/5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">receipt_long</span>
+</div>
+<div>
+<p class="text-sm font-medium text-primary">INV-2023-003</p>
+<p class="text-xs text-on-surface-variant">Oct 22, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold">$3,150.00</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-primary text-on-primary text-[10px] font-semibold rounded uppercase tracking-wider">Paid</span>
+</div>
+</div>
+<!-- Payment Item -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl border border-outline-variant/5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">payments</span>
+</div>
+<div>
+<p class="text-sm font-medium text-primary">INV-2023-004</p>
+<p class="text-xs text-on-surface-variant">Oct 21, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold">$890.00</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-surface-container-high text-on-surface-variant text-[10px] font-semibold rounded uppercase tracking-wider">Outstanding</span>
+</div>
+</div>
+<!-- Payment Item -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl border border-outline-variant/5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">receipt_long</span>
+</div>
+<div>
+<p class="text-sm font-medium text-primary">INV-2023-005</p>
+<p class="text-xs text-on-surface-variant">Oct 20, 2023</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold">$125.00</p>
+<span class="inline-block mt-1 px-2 py-0.5 bg-primary text-on-primary text-[10px] font-semibold rounded uppercase tracking-wider">Paid</span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Footer CTA -->
+<div class="mt-12 p-8 bg-primary rounded-2xl flex flex-col items-start gap-4 shadow-xl shadow-black/5">
+<h3 class="text-on-primary text-xl font-medium leading-tight">Generate custom report for Q4?</h3>
+<button class="bg-surface-container-lowest text-primary px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-surface-container-high transition-colors">
+                Export Data
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-3 bg-neutral-50/80 dark:bg-neutral-950/80 backdrop-blur-xl border-t border-neutral-200/20 dark:border-neutral-800/20 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">tactic</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest mt-1">Projects</span>
+</a>
+<!-- Active State: Payments -->
+<a class="flex flex-col items-center justify-center text-neutral-900 dark:text-neutral-50 bg-neutral-200/50 dark:bg-neutral-800/50 rounded-xl px-3 py-1 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest mt-1">Payments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest mt-1">Team</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

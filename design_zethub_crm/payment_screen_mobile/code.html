@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settle Invoice - Zethub CRM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .ios-modal-drag-handle {
+            width: 36px;
+            height: 5px;
+            background-color: #e2e2e2;
+            border-radius: 2.5px;
+            margin: 8px auto;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-container": "#eeeeee",
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#c6c6c6",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#000000",
+                        "tertiary-container": "#747474",
+                        "on-primary": "#e2e2e2",
+                        "on-primary-fixed": "#ffffff",
+                        "secondary-fixed-dim": "#acabaa",
+                        "tertiary-fixed-dim": "#464747",
+                        "on-secondary-container": "#1b1c1c",
+                        "on-error-container": "#410002",
+                        "inverse-surface": "#2f3131",
+                        "surface-tint": "#5e5e5e",
+                        "secondary": "#5f5e5e",
+                        "on-tertiary-fixed-variant": "#e3e2e2",
+                        "tertiary-fixed": "#5e5e5e",
+                        "outline-variant": "#c6c6c6",
+                        "outline": "#777777",
+                        "surface-dim": "#dadada",
+                        "surface-container-low": "#f3f3f3",
+                        "on-surface-variant": "#474747",
+                        "on-tertiary-container": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed-dim": "#474747",
+                        "on-tertiary-fixed": "#ffffff",
+                        "tertiary": "#3b3b3c",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "background": "#f9f9f9",
+                        "secondary-fixed": "#c8c6c6",
+                        "on-tertiary": "#e3e2e2",
+                        "on-secondary-fixed-variant": "#3b3b3b",
+                        "primary-fixed": "#5e5e5e",
+                        "on-primary-container": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1a1c1c",
+                        "surface-bright": "#f9f9f9",
+                        "secondary-container": "#d6d4d3",
+                        "primary-container": "#3b3b3b",
+                        "surface": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "inverse-on-surface": "#f1f1f1"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-zinc-200 min-h-screen flex flex-col justify-end">
+<!-- Top Navigation Placeholder (Hidden for focused task as per mandate) -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-zinc-950 flex justify-between items-center px-6 h-16 w-full hidden md:flex">
+<span class="text-lg font-semibold tracking-tighter text-zinc-900 dark:text-zinc-50">Zethub CRM</span>
+<div class="flex gap-6">
+<span class="text-zinc-500 dark:text-zinc-400 font-medium">Home</span>
+<span class="text-zinc-500 dark:text-zinc-400 font-medium">Projects</span>
+<span class="text-zinc-900 dark:text-zinc-50 font-semibold">Payments</span>
+<span class="text-zinc-500 dark:text-zinc-400 font-medium">Profile</span>
+</div>
+<span class="material-symbols-outlined text-zinc-900 dark:text-zinc-50">notifications</span>
+</header>
+<!-- iOS Style Modal Background -->
+<div class="fixed inset-0 bg-black/20 backdrop-blur-sm z-0"></div>
+<!-- Main Payment Modal Canvas -->
+<main class="relative z-10 bg-surface rounded-t-[2rem] w-full max-w-md mx-auto min-h-[813px] flex flex-col shadow-2xl overflow-hidden">
+<!-- Drag Handle -->
+<div class="ios-modal-drag-handle"></div>
+<!-- Header -->
+<div class="px-8 pt-6 pb-4 flex justify-between items-center">
+<h1 class="text-2xl font-bold tracking-tight text-primary">Settle Invoice</h1>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="px-8 py-4 space-y-8 overflow-y-auto pb-32">
+<!-- Invoice Premium Card (Asymmetric Layout) -->
+<section class="relative overflow-hidden bg-primary text-on-primary p-8 rounded-xl shadow-lg">
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex justify-between items-start mb-12">
+<div>
+<p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-60 mb-1">Invoice ID</p>
+<p class="font-mono text-sm tracking-wider">INV-2024-0892</p>
+</div>
+<span class="material-symbols-outlined text-3xl opacity-40">account_balance_wallet</span>
+</div>
+<div class="mt-auto">
+<p class="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-60 mb-2">Amount Due</p>
+<p class="text-4xl font-bold tracking-tighter">$4,500.00</p>
+</div>
+<div class="mt-8 pt-6 border-t border-on-primary/10 flex justify-between">
+<div>
+<p class="text-[10px] font-semibold uppercase tracking-[0.1em] opacity-50">Issue Date</p>
+<p class="text-sm font-medium">Oct 12, 2023</p>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-semibold uppercase tracking-[0.1em] opacity-50">Due Date</p>
+<p class="text-sm font-medium">Nov 12, 2023</p>
+</div>
+</div>
+</div>
+<!-- Abstract Grainy Texture Background -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-10 -mb-10 blur-2xl"></div>
+</section>
+<!-- Payment Methods Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between px-1">
+<h2 class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant">Select Payment Method</h2>
+<button class="text-[11px] font-bold text-primary px-2 py-1 rounded-lg hover:bg-surface-container transition-colors">ADD NEW</button>
+</div>
+<div class="space-y-3">
+<!-- Method 1: Credit Card -->
+<label class="group relative flex items-center p-5 bg-surface-container-lowest rounded-xl cursor-pointer ring-1 ring-inset ring-transparent hover:ring-outline-variant/30 transition-all duration-200">
+<input checked="" class="sr-only peer" name="payment_method" type="radio"/>
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg mr-4">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold text-primary">Credit Card</p>
+<p class="text-xs text-on-surface-variant">Visa ending in •••• 4242</p>
+</div>
+<div class="peer-checked:flex hidden items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<!-- Ghost Active State -->
+<div class="absolute inset-0 rounded-xl ring-2 ring-primary opacity-0 peer-checked:opacity-10 pointer-events-none"></div>
+</label>
+<!-- Method 2: Bank Transfer -->
+<label class="group relative flex items-center p-5 bg-surface-container-lowest rounded-xl cursor-pointer ring-1 ring-inset ring-transparent hover:ring-outline-variant/30 transition-all duration-200">
+<input class="sr-only peer" name="payment_method" type="radio"/>
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg mr-4">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold text-primary">Bank Transfer</p>
+<p class="text-xs text-on-surface-variant">Instant via Plaid Secure</p>
+</div>
+<div class="peer-checked:flex hidden items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<!-- Ghost Active State -->
+<div class="absolute inset-0 rounded-xl ring-2 ring-primary opacity-0 peer-checked:opacity-10 pointer-events-none"></div>
+</label>
+</div>
+</section>
+<!-- Security Badge -->
+<div class="flex items-center justify-center gap-2 py-4">
+<span class="material-symbols-outlined text-sm text-outline">verified_user</span>
+<p class="text-[10px] font-medium text-outline uppercase tracking-wider">Secure 256-bit SSL Encryption</p>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="mt-auto p-8 bg-surface-container-lowest/80 backdrop-blur-xl border-t border-surface-container-high">
+<div class="flex justify-between items-center mb-6">
+<span class="text-sm font-medium text-on-surface-variant">Total Amount</span>
+<span class="text-xl font-bold text-primary">$4,500.00</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-xl font-bold text-sm tracking-widest uppercase active:scale-[0.98] transition-transform shadow-lg shadow-black/10">
+                Pay Now
+            </button>
+<p class="text-center text-[10px] text-on-surface-variant mt-4">By tapping Pay Now, you agree to the Zethub Terms of Service.</p>
+</div>
+</main>
+<!-- Navigation Shell (Mobile specific Bottom Bar as per JSON) -->
+<nav class="fixed bottom-0 w-full border-t border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl flex justify-around items-center h-20 pb-4 px-2 w-full z-20">
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Projects</span>
+</div>
+<!-- ACTIVE STATE: Payments -->
+<div class="flex flex-col items-center justify-center text-zinc-900 dark:text-zinc-50 scale-105 transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Payments</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-600 transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-semibold uppercase tracking-widest">Profile</span>
+</div>
+</nav>
+</body></html>

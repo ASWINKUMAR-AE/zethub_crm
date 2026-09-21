@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e2e2e2",
+              "outline-variant": "#c6c6c6",
+              "surface-container-high": "#e8e8e8",
+              "on-surface-variant": "#474747",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "secondary-container": "#d6d4d3",
+              "primary": "#000000",
+              "surface-tint": "#5e5e5e",
+              "on-tertiary-container": "#ffffff",
+              "on-primary": "#e2e2e2",
+              "surface-container-low": "#f3f3f3",
+              "outline": "#777777",
+              "on-surface": "#1a1c1c",
+              "background": "#f9f9f9",
+              "surface": "#f9f9f9",
+              "on-primary-fixed": "#ffffff",
+              "inverse-on-surface": "#f1f1f1",
+              "secondary-fixed": "#c8c6c6",
+              "secondary": "#5f5e5e",
+              "on-tertiary-fixed": "#ffffff",
+              "on-error-container": "#410002",
+              "tertiary-fixed": "#5e5e5e",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#ffffff",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#acabaa",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#464747",
+              "on-secondary-container": "#1b1c1c",
+              "surface-bright": "#f9f9f9",
+              "surface-dim": "#dadada",
+              "surface-variant": "#e2e2e2",
+              "on-background": "#1a1c1c",
+              "surface-container": "#eeeeee",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "primary-container": "#3b3b3b",
+              "error": "#ba1a1a",
+              "primary-fixed": "#5e5e5e",
+              "tertiary": "#3b3b3c",
+              "primary-fixed-dim": "#474747",
+              "inverse-surface": "#2f3131",
+              "tertiary-container": "#747474",
+              "on-tertiary-fixed-variant": "#e3e2e2",
+              "on-secondary-fixed": "#1b1c1c",
+              "inverse-primary": "#c6c6c6",
+              "on-tertiary": "#e3e2e2"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface flex justify-center items-start min-h-screen">
+<!-- iPhone 14 Container -->
+<div class="relative w-[393px] h-[852px] bg-surface-container-lowest overflow-hidden flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-[393px] z-50 flex items-center justify-between px-6 h-16 bg-neutral-50 dark:bg-neutral-950">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-neutral-900 dark:text-neutral-50">grid_view</span>
+<h1 class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-50">Zethub</h1>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="close-up portrait of a professional man in a studio with soft overhead lighting and a neutral gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfWE665c1It_zRK3lgJjpjFFIEqCS_z8DAX0g7oo507lVOJ2mLTh2dMwIsugC5XzCOqeOlV0xpfp8HVCBk_AMXV_go00f09pKHpLd5WmIFzp-a5z0JtTY_hrqeOF5erof6WRwzGkSZFXtNCPXDFWBx0MaigNf33ujgiW5WDhU1EwNaG1-QeLAntZDeGmYOpOR91AVh22Z2FjTI4aCwz1xlyU5l1N6KIS9qt2kPK3A5FXHDk2iJ_Re0ktvWjsJspJr5SlfzS7jYihw"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto pt-20 pb-28 px-6 bg-surface-container-lowest">
+<!-- Page Header & Search -->
+<div class="mb-8">
+<h2 class="text-3xl font-semibold text-primary tracking-tight mb-6">Team</h2>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full py-4 pl-12 pr-4 bg-surface-container-low rounded-xl text-on-surface focus:outline-none focus:ring-1 focus:ring-primary/20 border-none placeholder:text-outline/60 text-sm" placeholder="Search team members..." type="text"/>
+</div>
+</div>
+<!-- Team List Section -->
+<div class="space-y-3">
+<!-- Member 1 -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-xl transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover grayscale" data-alt="monochrome headshot of a female professional with hair tied back, confident expression, minimalist lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkE9m8dRGsa7g_yy_iXTze9Ig4NbpS2qbZn5ceuTlY5jyC9ffjVEFIOG0g_L1TP7z9MW0LxbNjhMzJWM5bfcZojWx6PJxYJd2q_oKURw7QXx6CW7IrXHilrWmhYs8OkCGJ6LvDZMs1yDiyS-tRkFPdLZg-JKH813fY6UjEZdJPRDo04lMTiygQVeNO4W9LQAx1arwa3Xnrse7ILmmx1bdAxNInJq0rt_A-ugRphzKKrBwed5JGgX5-SftK5jVa-LYna34mHhjLd7I"/>
+</div>
+<div class="ml-4 flex-1">
+<p class="text-[15px] font-medium text-primary">Sarah Jenkins</p>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Lead Designer</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">more_vert</span>
+</div>
+<!-- Member 2 -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-xl transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover grayscale" data-alt="black and white studio portrait of a young man with glasses, professional creative style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFDi4gfBb5TMR7tAxOPYeyRM02Nb5geWa0e3fUF6bVExvWEHvOHJuK5EUBOdk-OiarkzHNwihF95hKHYkweRbTyyWtVZPaTzeK_cP_y3f3NF9TvFxGMv_Ax_yRYJqswFKR0L3EdvlrNvH5UQmjiKINjtDVlaCs-ezbTfKnklpQ6yVkH53mU_70Lrs95cZz1v8EJGmbWmqt_Zx5WVCYnx5zU_PnLfEnghikoJvHf8xbIjBWtIwiYOk2L3p15iWUGm6Phd_hBi5umQM"/>
+</div>
+<div class="ml-4 flex-1">
+<p class="text-[15px] font-medium text-primary">Marcus Thorne</p>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Senior Developer</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">more_vert</span>
+</div>
+<!-- Member 3 -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-xl transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover grayscale" data-alt="monochromatic editorial portrait of a woman looking directly at camera, soft side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvIsub0QmBxZlYzkJ-mCvcTqPcEjWPpdxmoixUbWVsYWdmxeu1tRsDqjZ9S-eTUv9FU1gOPzWPbHqOb0TjcjYlx-No5Qd5aGmWEj1sOcPlmeTMUQCsnafSTJrdMpLdF4eqw3rTQRjmaAfCvj7zVEAONcgtB5yiImRt1xUgUaMlyvPe9ViABMPGOXXNtT3oIBXwB8FCfApAwEg8uB5hLTFJJKLSVk0l5SphAiWXSfBjU5SIEGK7AmutSaMnCodnr4kPPU1H6CPUKJQ"/>
+</div>
+<div class="ml-4 flex-1">
+<p class="text-[15px] font-medium text-primary">Elena Rodriguez</p>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Product Manager</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">more_vert</span>
+</div>
+<!-- Member 4 -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-xl transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover grayscale" data-alt="grayscale photo of a businessman in a suit, professional corporate headshot with clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnLuvls60gGv0QPvYlWYrQPy1ctLD4vK5PWiPttSGfcSSsSlM-bgXwUtNgVWTztJyNGt7hjNK0lKabVMmEVnJjBey1-phnFczGUirQhS7Z6XBTpaABi8wklOa6s-hhWn2eRw9kFf_fEKCt_J3Texh4cmSirC1OqKItVcXEOhvdLOWLYkr8JZiT2ahJ30pZa39z-I8Lj60rr65PglkTvfytqVfChenvgxtc_9GZoXQJP8CEgfoVpIJeKR08k5c2Id3y-wdldDWTSOk"/>
+</div>
+<div class="ml-4 flex-1">
+<p class="text-[15px] font-medium text-primary">David Chen</p>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">DevOps Engineer</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">more_vert</span>
+</div>
+<!-- Member 5 -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-xl transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover grayscale" data-alt="black and white portrait of a woman with curly hair, natural light, elegant and minimalist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnaIlo125QA-aOJY8KQzCh_1xpvNqG1JgR6aNVLgH_PrQx7vZkFZDx9q0HsMvIZT1liELh48N3WeNDGhkXWbslUAEqaZg2eAFjeay2qqDm_eKFsLiWkQnVncAqQiSvOP3IGm7E2HAqs93qHln0F3apg2YthrDpk8j5esbAjjKwyk9CmRlRb7NhiYkYoFqouOees7oKdkm5c6Rmu50MEUjRSo1nDttwNbahSt-_m3iiS3lsTcbeXJaSmQeDx7CWJih22HOn1EJAHKc"/>
+</div>
+<div class="ml-4 flex-1">
+<p class="text-[15px] font-medium text-primary">Sasha Kim</p>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">UX Researcher</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">more_vert</span>
+</div>
+<!-- Member 6 (Zebra Stripe Effect) -->
+<div class="flex items-center p-4 bg-surface-container-low rounded-xl transition-all active:scale-[0.98]">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover grayscale" data-alt="grayscale close-up of a smiling professional man, soft studio lighting, high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7nbZlKd_txTjHE6kzVZ0mDFQ9YRO0KeTslyacRRxR1vsXxKqa5bNLPVz5kqVBYaJg-0BQrkafUHZWXzhy0FYJgBYERC3oVhLmJA9V_vDXXKfBPRhgcEMFn5jT7cvHH7YXYwe9AIX3rj9605Xf7BKVK1Px5tMmqCb93WCHPF0ylaPRj-NGzBW6xbVp6mwk9ABqC_RL5MZKJnSdGOyBk-FQfdCeZfBh63ShdjMKnaNp45SquQeoNX5jIFxi6-jz3OwVIipocEG0Uuc"/>
+</div>
+<div class="ml-4 flex-1">
+<p class="text-[15px] font-medium text-primary">Julian Vane</p>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">QA Specialist</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant">more_vert</span>
+</div>
+</div>
+<!-- Quick Action -->
+<button class="w-full mt-10 py-4 bg-primary text-on-primary rounded-xl font-medium text-sm transition-all active:opacity-70 active:scale-95">
+                Invite New Member
+            </button>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-[393px] z-50 flex justify-around items-center px-4 pb-8 pt-3 bg-neutral-50/80 dark:bg-neutral-950/80 backdrop-blur-xl border-t border-neutral-200/20 dark:border-neutral-800/20 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-all active:scale-90">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-all active:scale-90">
+<span class="material-symbols-outlined">tactic</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest mt-1">Projects</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-all active:scale-90">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest mt-1">Payments</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-900 dark:text-neutral-50 bg-neutral-200/50 dark:bg-neutral-800/50 rounded-xl px-3 py-1 transition-all active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest mt-1">Team</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 transition-all active:scale-90">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</div>
+</body></html>

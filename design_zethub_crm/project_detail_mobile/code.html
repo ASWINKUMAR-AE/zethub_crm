@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e2e2e2",
+              "outline-variant": "#c6c6c6",
+              "surface-container-high": "#e8e8e8",
+              "on-surface-variant": "#474747",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "secondary-container": "#d6d4d3",
+              "primary": "#000000",
+              "surface-tint": "#5e5e5e",
+              "on-tertiary-container": "#ffffff",
+              "on-primary": "#e2e2e2",
+              "surface-container-low": "#f3f3f3",
+              "outline": "#777777",
+              "on-surface": "#1a1c1c",
+              "background": "#f9f9f9",
+              "surface": "#f9f9f9",
+              "on-primary-fixed": "#ffffff",
+              "inverse-on-surface": "#f1f1f1",
+              "secondary-fixed": "#c8c6c6",
+              "secondary": "#5f5e5e",
+              "on-tertiary-fixed": "#ffffff",
+              "on-error-container": "#410002",
+              "tertiary-fixed": "#5e5e5e",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#ffffff",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#acabaa",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#464747",
+              "on-secondary-container": "#1b1c1c",
+              "surface-bright": "#f9f9f9",
+              "surface-dim": "#dadada",
+              "surface-variant": "#e2e2e2",
+              "on-background": "#1a1c1c",
+              "surface-container": "#eeeeee",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "primary-container": "#3b3b3b",
+              "error": "#ba1a1a",
+              "primary-fixed": "#5e5e5e",
+              "tertiary": "#3b3b3c",
+              "primary-fixed-dim": "#474747",
+              "inverse-surface": "#2f3131",
+              "tertiary-container": "#747474",
+              "on-tertiary-fixed-variant": "#e3e2e2",
+              "on-secondary-fixed": "#1b1c1c",
+              "inverse-primary": "#c6c6c6",
+              "on-tertiary": "#e3e2e2"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-neutral-50 dark:bg-neutral-950">
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-neutral-900 dark:text-neutral-50 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors p-2 rounded-lg" data-icon="grid_view">grid_view</button>
+<h1 class="text-xl font-bold tracking-tighter text-neutral-900 dark:text-neutral-50">Zethub</h1>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="close up headshot of a professional person with a clean minimalist background and neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqTjzCaDLIoxm5nS3Sea7J8IWRP972poCCtb7qGFWShYsdpDe3vHRvhXXNotLS0mQ9JjZHRd_Lqiq5dj1SIBl83mcymKhGawrcp_w9AZxvFvYEQ17ZmCdSHax07c6QF-axxV0PnsSEx4Y5huzOM5DQ8k3rL0vnGLv_JD2-gQ8v0mtg4VbAGlpUXGgqqPQ8ZJR5QyGnwzwzQCXMsoj-yKhBvmJaJMQMPFio61RYSu-4Ib-Az0d8XwRJm8JJrWyIdum3CbZi2RIgexo"/>
+</div>
+</header>
+<main class="pt-20 px-6 max-w-md mx-auto">
+<!-- Project Title Header -->
+<section class="mt-4 mb-8">
+<p class="font-label text-[10px] tracking-[0.2em] text-on-surface-variant mb-1 uppercase font-semibold">Project Details</p>
+<h2 class="font-headline text-3xl font-semibold tracking-tight text-primary">Apollo E-commerce Redesign</h2>
+</section>
+<!-- Segmented Control / Tabs -->
+<nav class="flex p-1 bg-surface-container-high rounded-xl mb-8">
+<button class="flex-1 py-2 text-sm font-medium rounded-lg bg-surface-container-lowest shadow-sm text-primary">Overview</button>
+<button class="flex-1 py-2 text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Milestones</button>
+<button class="flex-1 py-2 text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">Team</button>
+</nav>
+<!-- Overview Section -->
+<div class="space-y-6">
+<!-- Project Hero Card (Bento Style) -->
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 p-6 bg-surface-container-lowest rounded-xl">
+<h3 class="font-label text-[10px] tracking-widest text-on-surface-variant mb-4 uppercase font-semibold">Description</h3>
+<p class="text-on-surface leading-relaxed text-[15px]">
+                        Comprehensive overhaul of the core transactional engine and visual identity for Apollo's global marketplace. Focus on structural integrity and conversion velocity.
+                    </p>
+</div>
+<!-- Budget Card -->
+<div class="p-6 bg-surface-container-lowest rounded-xl flex flex-col justify-between aspect-square">
+<h3 class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase font-semibold">Budget</h3>
+<div>
+<span class="text-2xl font-semibold text-primary tracking-tight">$142.5k</span>
+<p class="text-[11px] text-on-surface-variant mt-1 italic">64% utilized</p>
+</div>
+</div>
+<!-- Timeline Card -->
+<div class="p-6 bg-surface-container-lowest rounded-xl flex flex-col justify-between aspect-square">
+<h3 class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase font-semibold">Deadline</h3>
+<div>
+<span class="text-2xl font-semibold text-primary tracking-tight">Dec 14</span>
+<p class="text-[11px] text-on-surface-variant mt-1">24 days left</p>
+</div>
+</div>
+</div>
+<!-- Progress Section -->
+<div class="p-6 bg-surface-container-lowest rounded-xl">
+<div class="flex justify-between items-end mb-4">
+<h3 class="font-label text-[10px] tracking-widest text-on-surface-variant uppercase font-semibold">System Progress</h3>
+<span class="text-xl font-bold tracking-tighter">72%</span>
+</div>
+<!-- Custom High Contrast Progress Bar -->
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[72%]"></div>
+</div>
+<div class="mt-6 space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface-variant">Architecture Phase</span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface-variant">UI System Refinement</span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface">Beta Integration</span>
+<div class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Meta Section (Asymmetric Data) -->
+<div class="flex gap-4">
+<div class="flex-grow p-4 bg-surface-container-low rounded-xl">
+<h4 class="font-label text-[9px] tracking-widest text-on-surface-variant uppercase mb-2">Primary Client</h4>
+<p class="text-sm font-medium">Apollo Dynamics Corp.</p>
+</div>
+<div class="w-1/3 p-4 bg-surface-container-low rounded-xl text-center">
+<h4 class="font-label text-[9px] tracking-widest text-on-surface-variant uppercase mb-2">Priority</h4>
+<span class="inline-block px-2 py-0.5 bg-primary text-[10px] font-bold text-on-primary rounded uppercase">Critical</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-3 bg-neutral-50/80 dark:bg-neutral-950/80 backdrop-blur-xl border-t border-neutral-200/20 dark:border-neutral-800/20 shadow-[0_-4px_24px_rgba(0,0,0,0.04)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-900 dark:text-neutral-50 bg-neutral-200/50 dark:bg-neutral-800/50 rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="tactic">tactic</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="payments">payments</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest">Payments</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="group">group</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest">Team</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Inter'] font-medium text-[11px] uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+</body></html>

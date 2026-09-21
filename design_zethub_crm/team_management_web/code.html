@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zethub CRM - Team Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e2e2e2",
+              "outline-variant": "#c6c6c6",
+              "surface-container-high": "#e8e8e8",
+              "on-surface-variant": "#474747",
+              "on-secondary-fixed-variant": "#3b3b3b",
+              "secondary-container": "#d6d4d3",
+              "primary": "#000000",
+              "surface-tint": "#5e5e5e",
+              "on-tertiary-container": "#ffffff",
+              "on-primary": "#e2e2e2",
+              "surface-container-low": "#f3f3f3",
+              "outline": "#777777",
+              "on-surface": "#1a1c1c",
+              "background": "#f9f9f9",
+              "surface": "#f9f9f9",
+              "on-primary-fixed": "#ffffff",
+              "inverse-on-surface": "#f1f1f1",
+              "secondary-fixed": "#c8c6c6",
+              "secondary": "#5f5e5e",
+              "on-tertiary-fixed": "#ffffff",
+              "on-error-container": "#410002",
+              "tertiary-fixed": "#5e5e5e",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#ffffff",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#acabaa",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#464747",
+              "on-secondary-container": "#1b1c1c",
+              "surface-bright": "#f9f9f9",
+              "surface-dim": "#dadada",
+              "surface-variant": "#e2e2e2",
+              "on-background": "#1a1c1c",
+              "surface-container": "#eeeeee",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "primary-container": "#3b3b3b",
+              "error": "#ba1a1a",
+              "primary-fixed": "#5e5e5e",
+              "tertiary": "#3b3b3c",
+              "primary-fixed-dim": "#474747",
+              "inverse-surface": "#2f3131",
+              "tertiary-container": "#747474",
+              "on-tertiary-fixed-variant": "#e3e2e2",
+              "on-secondary-fixed": "#1b1c1c",
+              "inverse-primary": "#c6c6c6",
+              "on-tertiary": "#e3e2e2"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-shift {
+            background: linear-gradient(to right, #f3f3f3, #f9f9f9);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased flex overflow-hidden">
+<!-- SideNavBar Component -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-4 bg-neutral-50 dark:bg-black h-screen w-64 border-r border-neutral-200 dark:border-neutral-900 z-50">
+<div class="mb-8 px-2">
+<h1 class="text-xl font-semibold tracking-tighter text-black dark:text-white">Zethub</h1>
+<p class="text-xs text-neutral-500 font-medium">CRM Admin</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-900 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-900 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">folder_copy</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-900 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">emoji_events</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Milestones</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-900 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Payments</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-black dark:text-white font-semibold bg-white dark:bg-neutral-800 rounded-lg shadow-sm Active: scale-[0.98] transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Team</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-900 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+<span class="font-['Inter'] font-medium text-sm tracking-tight">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-4 border-t border-neutral-100 dark:border-neutral-900">
+<div class="flex items-center gap-3 px-2 py-2">
+<div class="w-8 h-8 rounded-full bg-neutral-200 overflow-hidden">
+<img alt="Admin Profile" class="w-full h-full object-cover" data-alt="professional portrait of a corporate executive in a minimalist studio setting with soft monochromatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmS0T_UYtkpHh9Z810EBU0u_SeUIyeik7sAS7VKA9pfZdJ_hO9L4TBuKuimWuvQkeF20QHyrsrn5okw_zr3pDZ2SyCN-Ox83CrXulbNI6Fpx0OzZHeUsp7ACiX4JiSx9IfRsk7CJOpX5rN5GwGpCUnrOXhzzzufVwSCFcZ9IyHW3Xv-crBL14RNrKMQtXG2i41RpYtp1GaX_ws_VdEsHhgTM2kdX03uTySmnrxUltsoCYs4niiYp20vk7HWTwY1jbPKAhoiB0Ygy8"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-semibold">Alex Rivera</span>
+<span class="text-[10px] text-neutral-500">System Admin</span>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 ml-64 min-h-screen flex flex-col bg-surface overflow-y-auto">
+<!-- TopNavBar Component -->
+<header class="flex justify-between items-center px-8 sticky top-0 z-40 w-full h-16 bg-white/80 dark:bg-black/80 backdrop-blur-xl border-b border-neutral-100 dark:border-neutral-900">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-neutral-400 text-sm">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary/20 transition-all" placeholder="Search team members..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="text-neutral-400 hover:text-black transition-opacity">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-neutral-400 hover:text-black transition-opacity">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-neutral-200"></div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded font-medium text-sm flex items-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+                    Add Member
+                </button>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="p-8 max-w-7xl mx-auto w-full space-y-8">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="text-3xl font-semibold tracking-tight text-primary">Team Management</h2>
+<p class="text-on-surface-variant mt-1">Manage permissions, monitor workloads, and coordinate team roles.</p>
+</div>
+<div class="flex gap-2 p-1 bg-surface-container-low rounded-lg">
+<button class="px-3 py-1.5 text-xs font-semibold bg-white shadow-sm rounded-md">Grid View</button>
+<button class="px-3 py-1.5 text-xs font-semibold text-on-surface-variant hover:text-primary transition-colors">List View</button>
+</div>
+</div>
+<!-- Dashboard Stats (Asymmetric Layout) -->
+<div class="grid grid-cols-12 gap-6">
+<div class="col-span-12 md:col-span-8 bg-surface-container-lowest p-6 rounded-xl border border-neutral-100/50 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<span class="text-xs font-semibold tracking-widest text-on-surface-variant uppercase">Activity Overview</span>
+<span class="text-xs font-medium text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">Last 30 Days</span>
+</div>
+<div class="flex items-end gap-12">
+<div>
+<span class="text-5xl font-extrabold tracking-tighter">42</span>
+<p class="text-xs font-medium text-on-surface-variant mt-1">Active Members</p>
+</div>
+<div class="h-16 w-[1px] bg-neutral-100"></div>
+<div>
+<span class="text-5xl font-extrabold tracking-tighter">128</span>
+<p class="text-xs font-medium text-on-surface-variant mt-1">Open Tasks</p>
+</div>
+<div class="h-16 w-[1px] bg-neutral-100"></div>
+<div>
+<span class="text-5xl font-extrabold tracking-tighter">94%</span>
+<p class="text-xs font-medium text-on-surface-variant mt-1">Efficiency Rate</p>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-primary text-on-primary p-6 rounded-xl flex flex-col justify-center gap-4">
+<h3 class="text-lg font-medium leading-tight">Growth Insight</h3>
+<p class="text-sm opacity-80 leading-relaxed">Your team size has grown by 12% this quarter. Consider updating workspace seats.</p>
+<a class="text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all" href="#">Upgrade Plan <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Team Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Member Card 1 -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl border border-transparent hover:border-neutral-200 transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Jordan Smith" class="w-full h-full object-cover" data-alt="headshot of a young professional man with short hair and glasses wearing a neutral grey t-shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVfZ_kiZXy4Rxpcj6btTK-JyOxZC6Y2njtSgUhtNUoPT-0hGOKVO7aoq5mad_dR60DmSLojAyWtwqTBhObjizzfPt1zQvNna_DyduGNc9yBrtcaeRc1zPf1-dEGNr0-IgI62w5GSTTTmYqgkg1m4YbDDPpEZhybp6mT4sjn2-fRbPQWZdawuiZ6coiVs-XMgARx691mEsClcB2adSntoOYxtejyJ5ssMGjs4v-fsaXBTbdVMKMzquVpkJ9PAC0RGBBN5n_Glu1Mog"/>
+</div>
+<button class="text-neutral-300 group-hover:text-neutral-500 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div>
+<h4 class="text-base font-semibold text-primary">Jordan Smith</h4>
+<p class="text-xs text-on-surface-variant mb-4">Lead Designer</p>
+</div>
+<div class="space-y-3 pt-4 border-t border-neutral-50">
+<div class="flex justify-between text-[11px]">
+<span class="text-on-surface-variant font-medium">Projects</span>
+<span class="font-semibold">04 Active</span>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-surface-container-low rounded text-[10px] font-medium">Z-Cloud</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded text-[10px] font-medium">Internal CRM</span>
+</div>
+<div class="flex items-center gap-2 pt-2 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">mail</span>
+                            jordan@zethub.io
+                        </div>
+</div>
+</div>
+<!-- Member Card 2 -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl border border-transparent hover:border-neutral-200 transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Elena Rodriguez" class="w-full h-full object-cover" data-alt="portrait of a confident woman with long dark hair and professional business attire in soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADlgLNy99kEOqXSLY1guTycn4lB_Au9sBRjqabdcggTufQaWWWh2CTUGPj7nYiZkqT51quyqWgHnp_yP8BfCIYj8wTuMnSt8ILIrFPCtIVNFV2ige3amXuVYRjPr7Q9Y4Zly6I4aXuYegCO5Uu714ZU8Hxa4UlqdMFfNymDz1nessGWt8uYcJ6t8bWEPoHjSB6oHP1rHCTUUCIE02ocDpu6p19YTEN51DjLvXPzRIgVc3WfOukw3cK_AM-ZYvDOsb5C8bCYbLhzsY"/>
+</div>
+<button class="text-neutral-300 group-hover:text-neutral-500 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div>
+<h4 class="text-base font-semibold text-primary">Elena Rodriguez</h4>
+<p class="text-xs text-on-surface-variant mb-4">Senior Developer</p>
+</div>
+<div class="space-y-3 pt-4 border-t border-neutral-50">
+<div class="flex justify-between text-[11px]">
+<span class="text-on-surface-variant font-medium">Projects</span>
+<span class="font-semibold">02 Active</span>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-surface-container-low rounded text-[10px] font-medium">API Core</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded text-[10px] font-medium">Mobile SDK</span>
+</div>
+<div class="flex items-center gap-2 pt-2 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">mail</span>
+                            elena@zethub.io
+                        </div>
+</div>
+</div>
+<!-- Member Card 3 -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl border border-transparent hover:border-neutral-200 transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Marcus Chen" class="w-full h-full object-cover" data-alt="professional headshot of an asian man in a minimalist white background wearing a charcoal sweater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxjT6Mb6HwCQiVB0HzZZnpm7ksuVJCiBDVgiBLAFYzRKV6Ad4Pm4LO-IJndf2e5jWeIrpBf0K7YWlxLZDSPH2-qvmWeXpijQ9kk5Tky10n7l-EM37yRUa9ehlo7mUFJqju-MhR8RGVS72U4i0hC0zrLmOZ12iZJZz6bbYNUkTx1fgDwVkHk6vmnVFcAQuPvjq1PtznnSxClRxGhCpytvWYLmivzGDB2-jFwR4fm8f_y34dgCb6cCWit0aq6h48klRdv-QvKk9-3qA"/>
+</div>
+<button class="text-neutral-300 group-hover:text-neutral-500 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div>
+<h4 class="text-base font-semibold text-primary">Marcus Chen</h4>
+<p class="text-xs text-on-surface-variant mb-4">Product Manager</p>
+</div>
+<div class="space-y-3 pt-4 border-t border-neutral-50">
+<div class="flex justify-between text-[11px]">
+<span class="text-on-surface-variant font-medium">Projects</span>
+<span class="font-semibold">06 Active</span>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-surface-container-low rounded text-[10px] font-medium">Roadmap 24</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded text-[10px] font-medium">Stakeholder Sync</span>
+</div>
+<div class="flex items-center gap-2 pt-2 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">mail</span>
+                            marcus@zethub.io
+                        </div>
+</div>
+</div>
+<!-- Member Card 4 -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl border border-transparent hover:border-neutral-200 transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="Sarah Jenkins" class="w-full h-full object-cover" data-alt="portrait of a woman with curly hair and a friendly smile in a professional workspace setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8lkccOeRnuttjwC6dXN933RWMMe4TaiB387Mj1N9id-kgLGS4FWIczmv29LPlTV9WLLSYEWn1YzNwoypMHqPnkpVlrV1vhcc9BchTzGEWU9JejdrGjG44BVUY9vzr0eW_G33bzrdolcImmuO-b6yvJX2ul_3NLnilJ39mJ_V7oJMpm-sAcxx3spC-qoRLwbFbHnKAYpcN8kFJef8ps6kwOxcycb0E8_Lcjtz-xy3nm4LG_DR4ibCnXD0KAfKVLzYmDsW5UMAdbQ"/>
+</div>
+<button class="text-neutral-300 group-hover:text-neutral-500 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div>
+<h4 class="text-base font-semibold text-primary">Sarah Jenkins</h4>
+<p class="text-xs text-on-surface-variant mb-4">Account Executive</p>
+</div>
+<div class="space-y-3 pt-4 border-t border-neutral-50">
+<div class="flex justify-between text-[11px]">
+<span class="text-on-surface-variant font-medium">Projects</span>
+<span class="font-semibold">12 Active</span>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-surface-container-low rounded text-[10px] font-medium">Enterprise Sales</span>
+</div>
+<div class="flex items-center gap-2 pt-2 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">mail</span>
+                            sarah.j@zethub.io
+                        </div>
+</div>
+</div>
+<!-- Member Card 5 -->
+<div class="group bg-surface-container-lowest p-5 rounded-xl border border-transparent hover:border-neutral-200 transition-all duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden">
+<img alt="David Miller" class="w-full h-full object-cover" data-alt="minimalist portrait of a mature professional man with short grey hair wearing a crisp white shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCda9nAKj2UElzpLYozX9FDUki3zudtJz02qwcMl8fUKZH_aCyNjvJpXQFipb5FQRJRzkrA8mCdclcXvjCTKbr9xNZgs0bBCajnoORkBv7Z7nI8eft7aJNkoK9VTA77Nu0aFOeo5r-TuGbwJXsluBaLNtCREtyVW_opT0lOQek9QN7By8Je6wNKeyTKVfuQTd1yt34kACBN8l0TPpS53O58-OOfqaV5r0jweoqml3eyPqHQY8MmcAfaeBOLi2jmAsQT5yooi_bm5h0"/>
+</div>
+<button class="text-neutral-300 group-hover:text-neutral-500 transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div>
+<h4 class="text-base font-semibold text-primary">David Miller</h4>
+<p class="text-xs text-on-surface-variant mb-4">QA Engineer</p>
+</div>
+<div class="space-y-3 pt-4 border-t border-neutral-50">
+<div class="flex justify-between text-[11px]">
+<span class="text-on-surface-variant font-medium">Projects</span>
+<span class="font-semibold">03 Active</span>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-surface-container-low rounded text-[10px] font-medium">Automation</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded text-[10px] font-medium">UX Testing</span>
+</div>
+<div class="flex items-center gap-2 pt-2 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">mail</span>
+                            dmiller@zethub.io
+                        </div>
+</div>
+</div>
+<!-- Add New Member Skeleton Card -->
+<button class="group border-2 border-dashed border-neutral-200 p-5 rounded-xl flex flex-col items-center justify-center gap-2 hover:bg-white hover:border-primary/20 transition-all duration-300 min-h-[220px]">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-neutral-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">person_add</span>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant group-hover:text-primary transition-colors">Add Team Member</span>
+</button>
+</div>
+<!-- Recent Logged Activity (Glassmorphism Table) -->
+<div class="bg-surface-container-lowest/80 backdrop-blur-xl rounded-xl border border-neutral-100/50 overflow-hidden mt-12">
+<div class="px-6 py-4 border-b border-neutral-50 flex justify-between items-center">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-on-surface-variant">Recent Activity</h3>
+<button class="text-xs font-semibold text-primary/60 hover:text-primary">View Full Log</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-sm">
+<thead>
+<tr class="bg-surface-container-low/30">
+<th class="px-6 py-3 font-semibold text-xs text-on-surface-variant">Member</th>
+<th class="px-6 py-3 font-semibold text-xs text-on-surface-variant">Action</th>
+<th class="px-6 py-3 font-semibold text-xs text-on-surface-variant">Resource</th>
+<th class="px-6 py-3 font-semibold text-xs text-on-surface-variant">Timestamp</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-neutral-50">
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-neutral-200 overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="small circular avatar of a woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4h9yAdRL4bC7T_T1CjeyEBh9RjhzrBXGuLSewMMCH-2GyzePrGTpKjIirJ37iPiMt9ZedjgkO2FR_Qk0ImFPSoQ6n9BVINShIqCnQ4LpaBYweJ4RPp_MP_eg-Mk35J09k8HUDjr80PuPchWYQpo7dYqAzsfuT5VeuPcD1NxPD4SXUxoqC_OzkLL5EP1JWy0uXopA4tGPIAaAQ6KlsEwZ4Oq7DcuIQpBFmiPIqa4HmjvOdIjSk_PC3xaS3Yl19p8jUT5tAAWNZxpo"/>
+</div>
+<span class="font-medium">Elena Rodriguez</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant">Updated API Keys</td>
+<td class="px-6 py-4"><span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium">Core API</span></td>
+<td class="px-6 py-4 text-xs text-neutral-400 font-medium">14 mins ago</td>
+</tr>
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-neutral-200 overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="small circular avatar of a man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANdvqQsY2aDvSINemsnxyr-gel2evlwKmzaixWFl7SZgjtXrX5WNVz5GXrMuW106QNYd4PN42TbbLWKfJwrjGQyApt7rOVlbftDciyq030U2n3MvDxhb7lm_nNPijtIqXjI9E6PSdQA0IuK01kyKUhhsrDCpyT4iNUJBIFO-eiRTIvqrKDrAMue_ZLYD6F2qFx_iOaT9Se3w3XDkKdEoec5MvXNEQy1ThIKgOeQ1Ogg1_MJ4EhNFo6Xd7RtNI4_y5jf8cPIM2LTG4"/>
+</div>
+<span class="font-medium">Marcus Chen</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant">Closed Milestone</td>
+<td class="px-6 py-4"><span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium">Roadmap 24</span></td>
+<td class="px-6 py-4 text-xs text-neutral-400 font-medium">2 hours ago</td>
+</tr>
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-neutral-200 overflow-hidden">
+<img alt="" class="w-full h-full object-cover" data-alt="small circular avatar of a woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRMQY9afE8fNg6GH8aJ9mlIAF4igmKHWVI5PyLbZPxTM_vzXkLqYUKOEyYDkXQ-XO0CqMZk5-U3LV0H-Ke7k-ITMTwfFI4IyOu8ZQStPa3E3u2ttrP6kc8YETRkeOlkxjxEF6JsBacoVw9UIpWr_-c2lccZBOqasZymTqI6s6v3ZX8xGtqO_58RA0FNV8dXByduAE9gJvkYxZ1iKmOEiBoYbwHhwlHs7cCG0j9VmWQVmlNZMQ5h2_nJoolNj36lsU41DkpRfftyL8"/>
+</div>
+<span class="font-medium">Sarah Jenkins</span>
+</td>
+<td class="px-6 py-4 text-on-surface-variant">Created New Account</td>
+<td class="px-6 py-4"><span class="px-2 py-0.5 bg-neutral-100 rounded text-[10px] font-medium">Lead Gen</span></td>
+<td class="px-6 py-4 text-xs text-neutral-400 font-medium">5 hours ago</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</body></html>
